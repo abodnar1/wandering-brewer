@@ -1,11 +1,12 @@
 import React from "react";
-import { Route } from "react-router-dom";
+// import { Route } from "react-router-dom";
 import "./App.css";
+import Header from "../Header/Header";
 
 const App = () => {
   return (
     <div className="App">
-      <h1>The Wandering Brewer</h1>
+      <Header />
     </div>
   );
 };
