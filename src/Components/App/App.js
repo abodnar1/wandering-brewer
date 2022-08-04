@@ -5,14 +5,13 @@ import "./App.css";
 import Header from "../Header/Header";
 import Form from "../Form/Form";
 import Breweries from "../Breweries/Breweries";
-import BreweryDetails from "../BreweryDetails/BreweryDetails";
 
 const App = () => {
   const [breweries, setBreweries] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
-    fetch("https://api.openbrewerydb.org/breweries?by_city=savannah")
+    fetch("https://api.openbrewerydb.org/breweries?by_city=lancaster")
     .then(res => {
       if (res.ok) {
         return res.json()
@@ -25,11 +24,12 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
+    <div className="app">
       <Header />
       <Form />
-      <Breweries breweries={breweries} />
-      <BreweryDetails />
+      {!errorMessage ? <Breweries breweries={breweries} /> 
+      : 
+      <p className="error-message">{errorMessage}</p>}
     </div>
   );
 };
