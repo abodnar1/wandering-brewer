@@ -1,16 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
+import { fetchBreweriesByCity } from "../../apiCalls";
 import "./Form.css";
 
-const Form = () => {
+const Form = ({ setBreweries, setError }) => {
+  const [city, setCity] = useState("");
+
+  const handleClick = (e) => {
+    e.preventDefault();
+
+    fetchBreweriesByCity(city)
+      .then(data => setBreweries(data))
+      .catch(err => {
+        setError("Oops! Something went wrong. Please try again")
+      });
+
+    clearForm();
+  };
+
+  const clearForm = () => {
+    setCity("");
+  };
+
   return (
     <form>
-      <p className="site-info">A blurb about how to interact with the site</p>
-      <input className="state-search" 
+      <p className="site-info">Which city are you in? Type in a city below & see which breweries are in your area!</p>
+      <input className="city-search" 
         type="text"
-        name="state"
-        placeholder="State"
+        name="city"
+        placeholder="City"
+        required
+        value={city}
+        onChange={(e) => setCity(e.target.value)}
       />
-      <button className="search-button">Search</button>
+      <button className="search-button" onClick={(e) => handleClick(e)}>Search</button>
     </form>
   );
 };
