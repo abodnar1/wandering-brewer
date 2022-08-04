@@ -1,35 +1,32 @@
 import React, { useEffect, useState } from "react";
 // import { Route } from "react-router-dom";
 import "./App.css";
-// import { mockDataSavannah } from "../../mockDataSavannah";
+import "../../apiCalls";
 import Header from "../Header/Header";
 import Form from "../Form/Form";
 import Breweries from "../Breweries/Breweries";
+import { fetchBreweriesByCity } from "../../apiCalls";
 
 const App = () => {
   const [breweries, setBreweries] = useState([]);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("https://api.openbrewerydb.org/breweries?by_city=lancaster")
-    .then(res => {
-      if (res.ok) {
-        return res.json()
-      } else {
-        return setErrorMessage("There was an error, please try again")
-      }
-    })
+    fetchBreweriesByCity()
     .then(data => setBreweries(data))
-    .catch(err => setErrorMessage(err.message))
+    .catch(err => {
+      setError("Oops! Something went wrong. Please try again")
+      // console.log(err.message);
+    })
   }, []);
 
   return (
     <div className="app">
       <Header />
       <Form />
-      {!errorMessage ? <Breweries breweries={breweries} /> 
+      {!error ? <Breweries breweries={breweries} /> 
       : 
-      <p className="error-message">{errorMessage}</p>}
+      <p className="error-message">{error}</p>}
     </div>
   );
 };
