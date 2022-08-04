@@ -1,22 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import { Route } from "react-router-dom";
 import "./App.css";
-import { mockDataSavannah } from "../../mockDataSavannah";
+import "../../apiCalls";
 import Header from "../Header/Header";
 import Form from "../Form/Form";
 import Breweries from "../Breweries/Breweries";
-import BreweryDetails from "../BreweryDetails/BreweryDetails";
+import { fetchBreweriesByCity } from "../../apiCalls";
 
 const App = () => {
-  const [breweries, setBreweries] = useState(mockDataSavannah)
-  console.log(mockDataSavannah);
+  const [breweries, setBreweries] = useState([]);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    fetchBreweriesByCity()
+    .then(data => setBreweries(data))
+    .catch(err => {
+      setError("Oops! Something went wrong. Please try again")
+      // console.log(err.message);
+    })
+  }, []);
 
   return (
-    <div className="App">
+    <div className="app">
       <Header />
       <Form />
-      <Breweries breweries={breweries} />
-      <BreweryDetails />
+      {!error ? <Breweries breweries={breweries} /> 
+      : 
+      <p className="error-message">{error}</p>}
     </div>
   );
 };
