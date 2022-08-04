@@ -30,9 +30,9 @@ Breweries.propTypes = {
   breweries: PropTypes.arrayOf(
     PropTypes.shape({
       // id: PropTypes.string,
-      name: PropTypes.string,
-      city: PropTypes.string,
-      state: PropTypes.string,
+      name: PropTypes.string.isRequired,
+      city: PropTypes.string.isRequired,
+      state: PropTypes.string.isRequired,
     })
   )
 };
