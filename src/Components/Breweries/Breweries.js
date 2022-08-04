@@ -2,21 +2,23 @@ import React from "react";
 import "./Breweries.css";
 import BreweryCard from "../BreweryCard/BreweryCard";
 
-const Breweries = () => {
+const Breweries = ({ breweries }) => {
+
+  const breweriesByCity = breweries.map(brewery => {
+    return (
+      <BreweryCard 
+        id={brewery.id}
+        key={brewery.id}
+        name={brewery.name}
+        city={brewery.city}
+        state={brewery.state}
+      />
+    );
+  });
+
   return (
     <div className="breweries-container">
-      <BreweryCard />
-      <BreweryCard />
-      <BreweryCard />
-      <BreweryCard />
-      <BreweryCard />
-      <BreweryCard />
-      <BreweryCard />
-      <BreweryCard />
-      <BreweryCard />
-      <BreweryCard />
-      <BreweryCard />
-      <BreweryCard />
+      {breweriesByCity}
     </div>
   );
 };
