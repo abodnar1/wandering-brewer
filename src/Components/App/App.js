@@ -15,9 +15,7 @@ const App = () => {
     <div className="App">
       <Header />
       <Form />
-      <Breweries
-        breweries={breweries}
-      />
+      <Breweries breweries={breweries} />
       <BreweryDetails />
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Breweries.css";
 import BreweryCard from "../BreweryCard/BreweryCard";
 
@@ -24,3 +25,14 @@ const Breweries = ({ breweries }) => {
 };
 
 export default Breweries;
+
+Breweries.propTypes = {
+  breweries: PropTypes.arrayOf(
+    PropTypes.shape({
+      // id: PropTypes.string,
+      name: PropTypes.string,
+      city: PropTypes.string,
+      state: PropTypes.string,
+    })
+  )
+};

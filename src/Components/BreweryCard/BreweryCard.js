@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./BreweryCard.css";
 
 const BreweryCard = ({ name, city, state }) => {
@@ -11,3 +12,9 @@ const BreweryCard = ({ name, city, state }) => {
 };
 
 export default BreweryCard;
+
+BreweryCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
+  state: PropTypes.string.isRequired
+}
