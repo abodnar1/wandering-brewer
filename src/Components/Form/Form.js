@@ -5,9 +5,12 @@ const Form = () => {
   return (
     <form>
       <p className="site-info">A blurb about how to interact with the site</p>
-      <select className="city-select-dropdown">
-        
-      </select>
+      <input className="state-search" 
+        type="text"
+        name="state"
+        placeholder="State"
+      />
+      <button className="search-button">Search</button>
     </form>
   );
 };
