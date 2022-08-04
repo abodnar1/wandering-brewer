@@ -15,6 +15,8 @@ const Breweries = () => {
       <BreweryCard />
       <BreweryCard />
       <BreweryCard />
+      <BreweryCard />
+      <BreweryCard />
     </div>
   );
 };
