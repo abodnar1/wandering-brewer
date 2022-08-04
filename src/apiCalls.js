@@ -3,7 +3,9 @@ const fetchBreweriesByCity = () => {
   .then(res => {
     if (res.ok) {
       return res.json()
-    } 
+    } else {
+      throw new Error("Oops! Something went wrong.")
+    }
   });
 };
 
