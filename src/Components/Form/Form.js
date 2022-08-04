@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { fetchBreweriesByCity } from "../../apiCalls";
 import "./Form.css";
 
@@ -38,3 +39,8 @@ const Form = ({ setBreweries, setError }) => {
 };
 
 export default Form;
+
+Form.propTypes = {
+  setBreweries: PropTypes.func.isRequired,
+  setError: PropTypes.func.isRequired
+}
