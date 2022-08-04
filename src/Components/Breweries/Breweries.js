@@ -1,10 +1,20 @@
 import React from "react";
 import "./Breweries.css";
+import BreweryCard from "../BreweryCard/BreweryCard";
 
 const Breweries = () => {
   return (
     <div className="breweries-container">
-      <h2>HIIIIIIII I'M A BREWERY CONTAINER</h2>
+      <BreweryCard />
+      <BreweryCard />
+      <BreweryCard />
+      <BreweryCard />
+      <BreweryCard />
+      <BreweryCard />
+      <BreweryCard />
+      <BreweryCard />
+      <BreweryCard />
+      <BreweryCard />
     </div>
   );
 };
