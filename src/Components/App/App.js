@@ -1,11 +1,18 @@
 import React from "react";
-import { Route } from "react-router-dom";
+// import { Route } from "react-router-dom";
 import "./App.css";
+import Header from "../Header/Header";
+import Form from "../Form/Form";
+import Breweries from "../Breweries/Breweries";
+import BreweryDetails from "../BreweryDetails/BreweryDetails";
 
 const App = () => {
   return (
     <div className="App">
-      <h1>The Wandering Brewer</h1>
+      <Header />
+      <Form />
+      <Breweries />
+      <BreweryDetails />
     </div>
   );
 };

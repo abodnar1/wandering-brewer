@@ -1,0 +1,11 @@
+.brewery-card-wrapper {
+  border: 2px solid teal;
+  margin: .5em 
+}
+
+.brewery-card-wrapper:hover {
+  transform: scale(1.05);
+  box-sizing: border-box;
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}

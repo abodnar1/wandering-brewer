@@ -1,0 +1,22 @@
+.brewery-details-container {
+  border: 2px solid blue;
+  margin: 2em;
+}
+
+.type-and-favorite-wrapper {
+  border: 2px solid green;
+}
+
+.details-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  border: 2px solid purple;
+}
+
+.contact-info-wrapper {
+  border: 2px solid red;
+}
+
+.favorite-button {
+  cursor: pointer;
+}
