@@ -21,6 +21,3 @@ const fetchBreweryById = (id) => {
 }
 
 export { fetchBreweriesByCity, fetchBreweryById };
-
-// since I want to be able to click on the card, I'll need to grab the idea from the BreweryCard
-// and then use it to fetch the details of a single brewery
