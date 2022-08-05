@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./BreweryDetails.css";
 
 const BreweryDetails = ({ breweryToView }) => {
@@ -27,7 +28,13 @@ const BreweryDetails = ({ breweryToView }) => {
 
   return (
     <div className="brewery-details-container">
-      <h2 className="brewery-details-name">{breweryToView.name}</h2>
+      <div className="brewery-detail-header">
+        <Link to="/">
+          <span className="back-to-search-link">back to search</span>
+        </Link>
+        <h2 className="brewery-details-name">{breweryToView.name}</h2>
+      </div>
+      <img></img>
       <div className="details-wrapper">
         <div className="type-and-favorite-wrapper">
           <p className="brewery-type">Type: {breweryToView.brewery_type}</p>
