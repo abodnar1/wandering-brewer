@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import Header from "../Header/Header";
 import Form from "../Form/Form";
@@ -12,16 +12,21 @@ const App = () => {
 
   return (
     <div className="app">
-      <Route exact path="/">
-        <Header />
-        <Form breweries={breweries} setBreweries={setBreweries} setError={setError}/>
-        <Breweries breweries={breweries} error={error}/>
-      </Route>
+      <Switch>
+        <Route exact path="/">
+          <Header />
+          <Form breweries={breweries} setBreweries={setBreweries} setError={setError} />
+          <Breweries breweries={breweries} error={error} />
+        </Route>
 
-      <Route 
-        exact path="/:id"
-        render={({ match }) => <BreweryDetails />}>
-      </Route>
+        <Route 
+          path="/:id"
+          render={({ match }) => {
+            const breweryToView = breweries.find(brewery => brewery.id === match.params.id);
+            return <BreweryDetails breweryToView={breweryToView}/>
+          }}>
+        </Route>
+      </Switch>
     </div>
   );
 };

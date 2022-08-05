@@ -3,6 +3,12 @@
   margin: 2em;
 }
 
+.back-to-search-link {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 2em;
+}
+
 .type-and-favorite-wrapper {
   border: 2px solid green;
 }
@@ -20,3 +26,7 @@
 .favorite-button {
   cursor: pointer;
 }
+/* 
+.img { 
+  background-image: url("/public/assets/twotides1.png") 
+} */
