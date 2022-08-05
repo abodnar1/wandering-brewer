@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { fetchBreweriesByCity } from "../../apiCalls";
+import { getCleanData } from "../../utilities"
 import "./Form.css";
 
 const Form = ({ setBreweries, setError }) => {
@@ -10,7 +11,10 @@ const Form = ({ setBreweries, setError }) => {
     e.preventDefault();
 
     fetchBreweriesByCity(city)
-      .then(data => setBreweries(data))
+      .then(data => {
+        const cleanData = getCleanData(data)
+        setBreweries(cleanData)
+      })
       .catch(err => {
         setError("Oops! Something went wrong. Please try again")
       });
