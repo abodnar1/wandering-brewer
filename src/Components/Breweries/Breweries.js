@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./Breweries.css";
 import BreweryCard from "../BreweryCard/BreweryCard";
 
-const Breweries = ({ breweries }) => {
+const Breweries = ({ breweries, error }) => {
 
   const breweriesByCity = breweries.map(brewery => {
     return (
@@ -19,7 +19,7 @@ const Breweries = ({ breweries }) => {
 
   return (
     <div className="breweries-container">
-      {breweriesByCity}
+      {!error ? breweriesByCity : <p className="error-message">{error}</p>}
     </div>
   );
 };
@@ -27,9 +27,10 @@ const Breweries = ({ breweries }) => {
 export default Breweries;
 
 Breweries.propTypes = {
+  error: PropTypes.string,
   breweries: PropTypes.arrayOf(
     PropTypes.shape({
-      // id: PropTypes.string,
+      id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       city: PropTypes.string.isRequired,
       state: PropTypes.string.isRequired,
