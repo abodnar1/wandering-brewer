@@ -14,13 +14,16 @@ const App = () => {
     <div className="app">
       <Route exact path="/">
         <Header />
-        <Form breweries={breweries} setBreweries={setBreweries} setError={setError}/>
-        <Breweries breweries={breweries} error={error}/>
+        <Form breweries={breweries} setBreweries={setBreweries} setError={setError} />
+        <Breweries breweries={breweries} error={error} />
       </Route>
 
       <Route 
         exact path="/:id"
-        render={({ match }) => <BreweryDetails />}>
+        render={({ match }) => {
+          const breweryToView = breweries.find(brewery => brewery.id === match.params.id);
+          return <BreweryDetails breweryToView={breweryToView}/>
+        }}>
       </Route>
     </div>
   );

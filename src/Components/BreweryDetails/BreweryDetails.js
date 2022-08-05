@@ -1,11 +1,12 @@
 import React from "react";
 import "./BreweryDetails.css";
 
-const BreweryDetails = () => {
+const BreweryDetails = ({ breweryToView }) => {
+
   return (
     <div className="brewery-details-container">
 
-      <h2 className="brewery-details-name">NAME</h2>
+      <h2 className="brewery-details-name">{breweryToView.name}</h2>
 
       <div className="details-wrapper">
 
@@ -17,7 +18,7 @@ const BreweryDetails = () => {
         <div className="contact-info-wrapper">
           <p className="brewery-location">LOCATION</p>
           <p className="phone">PHONE NUMBER</p>
-          <p className="website-link">WEBSITE LINK</p>
+          <p className="website-link">Visit the page</p>
           <p className="last-updated">LAST UPDATED: DATE</p>
         </div>
 

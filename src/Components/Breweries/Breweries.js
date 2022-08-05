@@ -13,6 +13,7 @@ const Breweries = ({ breweries, error }) => {
         name={brewery.name}
         city={brewery.city}
         state={brewery.state}
+        type={brewery.brewery_type}
       />
     );
   });
@@ -34,6 +35,7 @@ Breweries.propTypes = {
       name: PropTypes.string.isRequired,
       city: PropTypes.string.isRequired,
       state: PropTypes.string.isRequired,
+      type: PropTypes.string
     })
   )
 };
