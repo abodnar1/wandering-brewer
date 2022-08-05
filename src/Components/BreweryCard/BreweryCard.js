@@ -5,7 +5,7 @@ import "./BreweryCard.css";
 
 const BreweryCard = ({ id, name, city, state, type }) => {
   return (
-    <Link to={`/${id}`}>
+    <Link to={`/${id}`} style={{textDecoration: "none"}}>
       <div className="brewery-card-wrapper">
         <h2 className="brewery-name">{name}</h2>
         <p className="brewery-location">{city}, {state}</p>

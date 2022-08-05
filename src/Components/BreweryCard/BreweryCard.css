@@ -1,6 +1,7 @@
 .brewery-card-wrapper {
   border: 2px solid teal;
   margin: 0.5em;
+  color: black;
   /* height: 15em;
   width: 20em; */
 }
