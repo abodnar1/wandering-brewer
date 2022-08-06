@@ -13,7 +13,7 @@ const Favorites = ({ favorites, setFavorites }) => {
         name={favorite.name}
         city={favorite.city}
         state={favorite.state}
-        type={favorite.brewery_type}
+        type={favorite.type}
         isFavorite={favorite.isFavorite}
       />
     );
@@ -21,7 +21,7 @@ const Favorites = ({ favorites, setFavorites }) => {
 
   return (
     <div className="favorites-container">
-      {favorites.length ? favoriteBreweries : <h3 className="no-favorites-message">No favorites yet!</h3>}
+      {favorites.length ? favoriteBreweries : <h3 className="no-favorites-message">You haven't added any favorites yet!</h3>}
     </div>
   );
 };

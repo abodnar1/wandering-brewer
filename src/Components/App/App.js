@@ -18,7 +18,7 @@ const App = () => {
       
       <Switch>
         <Route exact path="/">
-          <Form breweries={breweries} setBreweries={setBreweries} setError={setError} />
+          <Form breweries={breweries} setBreweries={setBreweries} error={error} setError={setError} />
           <Breweries breweries={breweries} error={error} favorites={favorites} setFavorites={setFavorites} />
         </Route>
 
