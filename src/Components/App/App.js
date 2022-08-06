@@ -12,6 +12,7 @@ const App = () => {
   const [favorites, setFavorites] = useState([]);
   const [error, setError] = useState("");
 
+  console.log("favorites", favorites)
   return (
     <div className="app">
       <Header />

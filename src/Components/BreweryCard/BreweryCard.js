@@ -13,11 +13,12 @@ const BreweryCard = ({ id, name, city, state, type, isFavorite, favorites, setFa
       city,
       state,
       type,
-      isFavorite,
+      isFavorite: true,
       setFavorites
     };
-    isFavorite = true;
-    setFavorites(favorites => [...favorites, newFavorite]);
+    // isFavorite = true;
+    console.log("isFavoriteBC", isFavorite)
+    setFavorites([...favorites, newFavorite]);
   };
 
   return (

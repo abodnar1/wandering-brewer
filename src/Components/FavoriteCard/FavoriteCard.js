@@ -5,12 +5,21 @@ import "./FavoriteCard.css";
 
 const FavoriteCard = ({ id, name, city, state, type, isFavorite, favorites, setFavorites }) => {
 
-  // add delete function
+  const removeFavorite = (e, id) => {
+    e.preventDefault();
+
+    console.log("isFavoriteBefore", isFavorite)
+    isFavorite = false;
+
+    const updatedFavorites = favorites.filter(favorite => favorite.id !== id)
+    setFavorites(updatedFavorites)
+    console.log("isFavoriteAfter", isFavorite)
+  };
 
   return (
     <Link to={`/${id}`} style={{textDecoration: "none"}}>
       <div className="favorite-card-wrapper">
-        <button className="remove-favorite-button" onClick={(e) => console.log("removed!")}>Remove</button>
+        <button className="remove-favorite-button" onClick={(e) => removeFavorite(e, id)}>Remove</button>
         <h2 className="favorite-name">{name}</h2>
         <p className="favorite-location">{city}, {state}</p>
         <div className="favorite-type">
