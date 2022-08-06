@@ -19,10 +19,13 @@ const App = () => {
       <Switch>
         <Route exact path="/">
           <Form breweries={breweries} setBreweries={setBreweries} setError={setError} />
-          <Breweries breweries={breweries} error={error} setFavorites={setFavorites} />
-          <Favorites favorites={favorites} setFavorites={setFavorites}error={error} />
+          <Breweries breweries={breweries} error={error} favorites={favorites} setFavorites={setFavorites} />
         </Route>
 
+        <Route path="/favorites">
+          <Favorites favorites={favorites} setFavorites={setFavorites} />
+        </Route>
+        
         <Route path="/:id"
           render={({ match }) => {
             const breweryToView = breweries.find(brewery => brewery.id === match.params.id);
@@ -30,9 +33,6 @@ const App = () => {
           }}>
         </Route>
         
-        {/* <Route path="/favorites">
-          <Favorites favorites={favorites} error={error} />
-        </Route> */}
       </Switch>
     </div>
   );

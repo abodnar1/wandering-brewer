@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Favorites.css";
-import BreweryCard from "../BreweryCard/BreweryCard";
+import FavoriteCard from "../FavoriteCard/FavoriteCard";
 
-const Favorites = ({ favorites, setFavorites, error }) => {
+const Favorites = ({ favorites, setFavorites }) => {
 
   const favoriteBreweries = favorites.map(favorite => {
     return (
-      <BreweryCard 
+      <FavoriteCard 
         id={favorite.id}
         key={favorite.id}
         name={favorite.name}
@@ -15,14 +15,13 @@ const Favorites = ({ favorites, setFavorites, error }) => {
         state={favorite.state}
         type={favorite.brewery_type}
         isFavorite={favorite.isFavorite}
-        setFavorites={setFavorites}
       />
     );
   });
 
   return (
     <div className="favorites-container">
-      {!error ? favoriteBreweries : <p className="error-message">{error}</p>}
+      {favorites.length ? favoriteBreweries : <h3 className="no-favorites-message">No favorites yet!</h3>}
     </div>
   );
 };
