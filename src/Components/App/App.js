@@ -5,9 +5,11 @@ import Header from "../Header/Header";
 import Form from "../Form/Form";
 import Breweries from "../Breweries/Breweries";
 import BreweryDetails from "../BreweryDetails/BreweryDetails";
+import Favorites from "../Favorites/Favorites";
 
 const App = () => {
   const [breweries, setBreweries] = useState([]);
+  const [favorites, setFavorites] = useState([]);
   const [error, setError] = useState("");
 
   return (
@@ -17,6 +19,7 @@ const App = () => {
           <Header />
           <Form breweries={breweries} setBreweries={setBreweries} setError={setError} />
           <Breweries breweries={breweries} error={error} />
+          <Favorites />
         </Route>
 
         <Route 
@@ -26,6 +29,7 @@ const App = () => {
             return <BreweryDetails breweryToView={breweryToView}/>
           }}>
         </Route>
+
       </Switch>
     </div>
   );
