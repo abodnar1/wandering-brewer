@@ -7,13 +7,9 @@ const FavoriteCard = ({ id, name, city, state, type, isFavorite, favorites, setF
 
   const removeFavorite = (e, id) => {
     e.preventDefault();
-
-    console.log("isFavoriteBefore", isFavorite)
     isFavorite = false;
-
-    const updatedFavorites = favorites.filter(favorite => favorite.id !== id)
-    setFavorites(updatedFavorites)
-    console.log("isFavoriteAfter", isFavorite)
+    const updatedFavorites = favorites.filter(favorite => favorite.id !== id);
+    setFavorites(updatedFavorites);
   };
 
   return (

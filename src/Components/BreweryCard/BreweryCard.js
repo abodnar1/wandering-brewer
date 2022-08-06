@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./BreweryCard.css";
 
-const BreweryCard = ({ id, name, city, state, type, isFavorite, favorites, setFavorites }) => {
+const BreweryCard = ({ id, name, city, state, type, favorites, setFavorites }) => {
 
   const addFavorite = (e) => {
     e.preventDefault();
@@ -16,8 +16,6 @@ const BreweryCard = ({ id, name, city, state, type, isFavorite, favorites, setFa
       isFavorite: true,
       setFavorites
     };
-    // isFavorite = true;
-    console.log("isFavoriteBC", isFavorite)
     setFavorites([...favorites, newFavorite]);
   };
 
@@ -43,7 +41,6 @@ BreweryCard.propTypes = {
   city: PropTypes.string.isRequired,
   state: PropTypes.string.isRequired,
   type: PropTypes.string,
-  isFavorite: PropTypes.bool.isRequired,
   favorites: PropTypes.array,
   setFavorites: PropTypes.func
 };
