@@ -15,6 +15,8 @@ const Favorites = ({ favorites, setFavorites }) => {
         state={favorite.state}
         type={favorite.type}
         isFavorite={favorite.isFavorite}
+        favorites={favorites}
+        setFavorites={setFavorites}
       />
     );
   });
@@ -28,4 +30,18 @@ const Favorites = ({ favorites, setFavorites }) => {
 
 export default Favorites;
 
-// prop types here
+Favorites.propTypes = {
+  setFavorites: PropTypes.func,
+  favorites: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      city: PropTypes.string.isRequired,
+      state: PropTypes.string.isRequired,
+      type: PropTypes.string,
+      isFavorite: PropTypes.bool.isRequired,
+      favorites: PropTypes.array,
+      setFavorites: PropTypes.func
+    })
+  )
+};

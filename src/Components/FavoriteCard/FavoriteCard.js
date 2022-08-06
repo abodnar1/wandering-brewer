@@ -3,12 +3,14 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./FavoriteCard.css";
 
-const FavoriteCard = ({ id, name, city, state, type }) => {
+const FavoriteCard = ({ id, name, city, state, type, isFavorite, favorites, setFavorites }) => {
+
+  // add delete function
 
   return (
     <Link to={`/${id}`} style={{textDecoration: "none"}}>
       <div className="favorite-card-wrapper">
-        {/* <button className="add-favorite-button" onClick={(e) => addFavorite(e)}>Favorite</button> */}
+        <button className="remove-favorite-button" onClick={(e) => console.log("removed!")}>Remove</button>
         <h2 className="favorite-name">{name}</h2>
         <p className="favorite-location">{city}, {state}</p>
         <div className="favorite-type">
@@ -21,4 +23,13 @@ const FavoriteCard = ({ id, name, city, state, type }) => {
 
 export default FavoriteCard;
 
-// need to add a delete function to this component
+FavoriteCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
+  state: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  isFavorite: PropTypes.bool.isRequired,
+  favorites: PropTypes.array,
+  setFavorites: PropTypes.func,
+};
