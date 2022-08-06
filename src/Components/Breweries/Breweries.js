@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./Breweries.css";
 import BreweryCard from "../BreweryCard/BreweryCard";
 
-const Breweries = ({ breweries, error }) => {
+const Breweries = ({ breweries, error, setFavorites }) => {
 
   const breweriesByCity = breweries.map(brewery => {
     return (
@@ -14,6 +14,8 @@ const Breweries = ({ breweries, error }) => {
         city={brewery.city}
         state={brewery.state}
         type={brewery.brewery_type}
+        isFavorite={brewery.isFavorite}
+        setFavorites={setFavorites}
       />
     );
   });
@@ -35,7 +37,9 @@ Breweries.propTypes = {
       name: PropTypes.string.isRequired,
       city: PropTypes.string.isRequired,
       state: PropTypes.string.isRequired,
-      type: PropTypes.string
+      type: PropTypes.string,
+      isFavorite: PropTypes.bool.isRequired,
+      setFavorites: PropTypes.func
     })
   )
 };

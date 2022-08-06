@@ -1,0 +1,10 @@
+.favorites-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: 2px solid black;
+}
+
+.error-message {
+  font-size: 2em;
+  color: red;
+}
