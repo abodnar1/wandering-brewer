@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
@@ -17,10 +18,17 @@ const Header = () => {
 
   return (
     <header className="header">
-      <h1 className="app-title">Wandering Brewer</h1>
+      <Link to="/">
+        <h1 className="app-title">Wandering Brewer</h1>
+      </Link>
       <p className="greeting">Good {timeOfDay}!</p>
+      <Link to="/favorites">
+        <p className="favorites-link">Favorites</p>
+      </Link>
     </header>
   );
 };
 
 export default Header;
+
+// will need to wrap h1 in a Link without textDecoration for "/"

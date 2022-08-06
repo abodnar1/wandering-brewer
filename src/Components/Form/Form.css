@@ -1,10 +1,14 @@
-.site-info {
+/* .site-info {
   font-size: 3em;
-}
+} */
 
 .city-search {
   width: 20em;
   margin: 0em 0em 2em 0em;
+}
+
+button:disabled {
+  cursor: not-allowed;
 }
 
 .search-button {
