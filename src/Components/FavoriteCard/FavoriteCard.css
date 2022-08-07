@@ -20,17 +20,5 @@
 
 .remove-favorite-button {
   cursor: pointer;
-  margin: 1em 0em 0em 0em;
+  font-size: 2em;
 }
-
-/* .favorite-card-wrapper:hover {
-  transform: scale(1.05);
-  box-sizing: border-box;
-  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-} */
-
-/* .favorite-type {
-  text-align: left;
-  margin-left: .5em;
-} */

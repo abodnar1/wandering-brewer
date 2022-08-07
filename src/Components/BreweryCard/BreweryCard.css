@@ -18,22 +18,8 @@
   height: 20%
 }
 
-.add-favorite-button {
+.full-beer-icon, 
+.empty-beer-icon {
+  font-size: 3em;
   cursor: pointer;
-  margin: 1em 0em 0em 0em;
 }
-
-button:disabled {
-  cursor: not-allowed;
-}
-/* .brewery-card-wrapper:hover {
-  transform: scale(1.05);
-  box-sizing: border-box;
-  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-} */
-
-/* .brewery-type {
-  text-align: left;
-  margin-left: .5em;
-} */

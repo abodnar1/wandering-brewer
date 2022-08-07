@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { FaTrash } from 'react-icons/fa';
 import "./FavoriteCard.css";
 
 const FavoriteCard = ({ id, name, city, state, type, isFavorite, favorites, setFavorites }) => {
@@ -20,7 +21,7 @@ const FavoriteCard = ({ id, name, city, state, type, isFavorite, favorites, setF
         {/* <div className="favorite-type">
           <p className="favorite-type">Type: {type}</p>
         </div> */}
-        <button className="remove-favorite-button" onClick={(e) => removeFavorite(e, id)}>Remove</button>
+        <span className="remove-favorite-button" onClick={(e) => removeFavorite(e, id)}><FaTrash /></span>
       </div>
     </Link>
   );
