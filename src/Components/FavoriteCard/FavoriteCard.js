@@ -15,12 +15,12 @@ const FavoriteCard = ({ id, name, city, state, type, isFavorite, favorites, setF
   return (
     <Link to={`/${id}`} style={{textDecoration: "none"}}>
       <div className="favorite-card-wrapper">
-        <button className="remove-favorite-button" onClick={(e) => removeFavorite(e, id)}>Remove</button>
         <h2 className="favorite-name">{name}</h2>
         <p className="favorite-location">{city}, {state}</p>
-        <div className="favorite-type">
+        {/* <div className="favorite-type">
           <p className="favorite-type">Type: {type}</p>
-        </div>
+        </div> */}
+        <button className="remove-favorite-button" onClick={(e) => removeFavorite(e, id)}>Remove</button>
       </div>
     </Link>
   );

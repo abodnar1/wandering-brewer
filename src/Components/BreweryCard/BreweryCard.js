@@ -22,12 +22,12 @@ const BreweryCard = ({ id, name, city, state, type, favorites, setFavorites }) =
   return (
     <Link to={`/${id}`} style={{textDecoration: "none"}}>
       <div className="brewery-card-wrapper">
-        <button className="add-favorite-button" onClick={(e) => addFavorite(e)}>Favorite</button>
         <h2 className="brewery-name">{name}</h2>
         <p className="brewery-location">{city}, {state}</p>
-        <div className="brewery-type">
-          <p className="brewery-type">Type: {type}</p>
-        </div>
+        {/* <div className="brewery-type"> */}
+          {/* <p className="brewery-type">Type: {type}</p>
+        </div> */}
+        <button className="add-favorite-button" onClick={(e) => addFavorite(e)}>Favorite</button>
       </div>
     </Link>
   );

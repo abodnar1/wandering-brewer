@@ -1,19 +1,33 @@
 .brewery-card-wrapper {
-  border: 2px solid teal;
+  height: 15em;
+  width: 20em;
   margin: 0.5em;
   color: black;
-  /* height: 15em;
-  width: 20em; */
+  border: 2px solid teal;
 }
 
-.brewery-card-wrapper:hover {
+.brewery-name {
+  height: 25%;
+  overflow-wrap: break-word;
+}
+
+.brewery-location {
+  height: 20%
+}
+
+.add-favorite-button {
+  cursor: pointer;
+  margin: 1em 0em 0em 0em;
+}
+
+/* .brewery-card-wrapper:hover {
   transform: scale(1.05);
   box-sizing: border-box;
   box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
   cursor: pointer;
-}
+} */
 
-.brewery-type {
+/* .brewery-type {
   text-align: left;
   margin-left: .5em;
-}
+} */

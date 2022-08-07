@@ -1,13 +1,7 @@
 .breweries-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  /* background-image: url("../../assets/cans.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; */
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-evenly;
+  justify-items: center;
   height: 100vh;
-}
-
-.error-message {
-  font-size: 2em;
-  color: red;
 }
