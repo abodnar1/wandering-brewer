@@ -17,13 +17,13 @@ const FavoriteCard = ({ id, name, city, state, type, isFavorite, image, favorite
     <div className="favorite-card-wrapper">
       <h2 className="favorite-name">{name}</h2>
       <p className="favorite-location">{city}, {state}</p>
+      <Link to={`/${id}`} style={{textDecoration: "none"}}>
+        <p className="view-details-link">View details</p>
+      </Link>
       <div className="favorite-image-container">
         <img className="favorite-type-image" src={image} alt={type}></img>
       </div>
       <span className="remove-favorite-button" onClick={(e) => removeFavorite(e, id)}><FaTrash /></span>
-      <Link to={`/${id}`} style={{textDecoration: "none"}}>
-        <p className="view-details-link">View details</p>
-      </Link>
     </div>
   );
 };

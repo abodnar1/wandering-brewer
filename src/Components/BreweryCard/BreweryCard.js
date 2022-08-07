@@ -38,14 +38,16 @@ const BreweryCard = ({ id, name, city, state, type, isFavorite, image, favorites
 
   return (
     <div className="brewery-card-wrapper">
+      <div className="favorite-icon-container">
+        {favoriteIcon ? <span className="favorite-icon" onClick={(e) => removeFavorite(e, id)}><FaBeer className="full-beer-icon"/></span> 
+        : 
+        <span className="favorite-icon" onClick={(e) => addFavorite(e)}><BiBeer className="empty-beer-icon"/></span>}
+      </div>
       <h2 className="brewery-name">{name}</h2>
       <p className="brewery-location">{city}, {state}</p>
       <div className="brewery-image-container">
         <img className="brewery-type-image" src={image} alt={type}></img>
       </div>
-      {favoriteIcon ? <span className="favorite-icon" onClick={(e) => removeFavorite(e, id)}><FaBeer className="full-beer-icon"/></span> 
-      : 
-      <span className="favorite-icon" onClick={(e) => addFavorite(e)}><BiBeer className="empty-beer-icon"/></span>}
       <Link to={`/${id}`} style={{textDecoration: "none"}}>
        <p className="view-details-link">View details</p>
       </Link>

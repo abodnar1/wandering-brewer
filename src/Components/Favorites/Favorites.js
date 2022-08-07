@@ -27,7 +27,7 @@ const Favorites = ({ favorites, setFavorites }) => {
     <>
       <div className="back-to-search-link-favorites">
         <Link to="/">
-           <span className="back-to-search-link-favorites">back to search</span>
+           <span>back to search</span>
         </Link>
       </div>
       <div className="favorites-container">

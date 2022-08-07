@@ -8,6 +8,12 @@
   border-radius: 15px;
 }
 
+.favorite-icon-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 4px 4px 0px 0px;
+}
+
 .brewery-name {
   height: 10%;
   overflow-wrap: break-word;
