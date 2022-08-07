@@ -1,6 +1,11 @@
 .brewery-details-container {
-  border: 2px solid blue;
-  margin: 4em;
+  height: 15em;
+  width: 20em;
+  margin: 0.5em;
+  color: black;
+  opacity: 0.8;
+  background-color: #E7E7E7;
+  border-radius: 15px;
 }
 
 .back-to-search-link {
@@ -26,7 +31,3 @@
 .favorite-button {
   cursor: pointer;
 }
-/* 
-.img { 
-  background-image: url("/public/assets/twotides1.png") 
-} */
