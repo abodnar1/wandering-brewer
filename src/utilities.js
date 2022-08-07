@@ -1,7 +1,6 @@
 const getCleanData = (apiFetchedData) => {
   return apiFetchedData.map(breweryObject => {
     let cleanedBreweryObject = {};
-
       cleanedBreweryObject.id = breweryObject.id;
       cleanedBreweryObject.name = breweryObject.name;
       cleanedBreweryObject.brewery_type = breweryObject.brewery_type;
@@ -13,7 +12,6 @@ const getCleanData = (apiFetchedData) => {
       cleanedBreweryObject.website_url = breweryObject.website_url;
       cleanedBreweryObject.updated_at = breweryObject.updated_at;
       cleanedBreweryObject.isFavorite = false;
-
     return cleanedBreweryObject;
   });
 };

@@ -1,14 +1,12 @@
 .favorites-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  border: 2px solid black;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-evenly;
+  justify-items: center;
+  height: 100vh;
 }
-
-button {
-  cursor: pointer;
-}
-
+/* 
 .error-message {
   font-size: 2em;
   color: red;
-}
+} */
