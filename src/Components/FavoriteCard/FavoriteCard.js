@@ -14,16 +14,14 @@ const FavoriteCard = ({ id, name, city, state, type, isFavorite, favorites, setF
   };
 
   return (
-    <Link to={`/${id}`} style={{textDecoration: "none"}}>
-      <div className="favorite-card-wrapper">
-        <h2 className="favorite-name">{name}</h2>
-        <p className="favorite-location">{city}, {state}</p>
-        {/* <div className="favorite-type">
-          <p className="favorite-type">Type: {type}</p>
-        </div> */}
-        <span className="remove-favorite-button" onClick={(e) => removeFavorite(e, id)}><FaTrash /></span>
-      </div>
-    </Link>
+    <div className="favorite-card-wrapper">
+      <h2 className="favorite-name">{name}</h2>
+      <p className="favorite-location">{city}, {state}</p>
+      <span className="remove-favorite-button" onClick={(e) => removeFavorite(e, id)}><FaTrash /></span>
+      <Link to={`/${id}`} style={{textDecoration: "none"}}>
+        <p className="view-details-link">View details</p>
+      </Link>
+    </div>
   );
 };
 
@@ -39,3 +37,4 @@ FavoriteCard.propTypes = {
   favorites: PropTypes.array,
   setFavorites: PropTypes.func,
 };
+
