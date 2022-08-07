@@ -20,6 +20,9 @@
   margin: 1em 0em 0em 0em;
 }
 
+button:disabled {
+  cursor: not-allowed;
+}
 /* .brewery-card-wrapper:hover {
   transform: scale(1.05);
   box-sizing: border-box;

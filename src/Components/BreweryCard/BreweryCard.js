@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./BreweryCard.css";
 
-const BreweryCard = ({ id, name, city, state, type, favorites, setFavorites }) => {
+const BreweryCard = ({ id, name, city, state, type, isFavorite, favorites, setFavorites }) => {
 
   const addFavorite = (e) => {
     e.preventDefault();
@@ -27,7 +27,7 @@ const BreweryCard = ({ id, name, city, state, type, favorites, setFavorites }) =
         {/* <div className="brewery-type"> */}
           {/* <p className="brewery-type">Type: {type}</p>
         </div> */}
-        <button className="add-favorite-button" onClick={(e) => addFavorite(e)}>Favorite</button>
+        <button className="add-favorite-button" disabled={isFavorite} onClick={(e) => addFavorite(e)}>Add to Favorites</button>
       </div>
     </Link>
   );
@@ -41,6 +41,7 @@ BreweryCard.propTypes = {
   city: PropTypes.string.isRequired,
   state: PropTypes.string.isRequired,
   type: PropTypes.string,
+  isFavorite: PropTypes.bool,
   favorites: PropTypes.array,
   setFavorites: PropTypes.func
 };
