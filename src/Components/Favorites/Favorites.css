@@ -1,9 +1,10 @@
 .favorites-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   justify-content: space-evenly;
   justify-items: center;
-  align-items: center;
   height: 100vh;
   background-color: #CEE1CD;
+  overflow: scroll;
+  flex-wrap: wrap;
+  align-items: center;
 }
