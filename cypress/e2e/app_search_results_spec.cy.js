@@ -1,4 +1,4 @@
-describe("Wandering Brew Main Page With Search Results", () => {
+describe("Wandering Brewer Main Page With Search Results", () => {
   beforeEach(() => {
     cy.intercept("GET", "https://api.openbrewerydb.org/breweries?by_city=savannah", {
       statusCode: 200,
@@ -15,7 +15,7 @@ describe("Wandering Brew Main Page With Search Results", () => {
     .get(".brewery-name").contains("h2", "Moon River Brewing Co")
     .get(".brewery-name").contains("h2", "Two Tides Brewing Company")
     .get(".brewery-location").first().contains("p", "Savannah, Georgia")
-  })
+  });
   
   it("should be able to click on the 'view details' link and see more information about the brewery", () => {
     cy.get("input[name='city']").type("savannah")
