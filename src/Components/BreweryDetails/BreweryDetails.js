@@ -28,27 +28,37 @@ const BreweryDetails = ({ breweryToView }) => {
 
   return (
     <div className="brewery-details-container">
-      <div className="brewery-detail-header">
-        <Link to="/">
-          <span className="back-to-search-link">back to search</span>
-        </Link>
-        <h2 className="brewery-details-name">{breweryToView.name}</h2>
-      </div>
-      <div className="details-wrapper">
-        <div className="type-and-favorite-wrapper">
-          <p className="brewery-type">Type: {breweryToView.brewery_type}</p>
-          <button className="favorite-button">FAV BUTTON</button>
+
+      <Link to="/">
+        <div className="back-to-search-link">back to search</div>
+      </Link>
+
+      <div className="brewery-details-wrapper">
+        <div className="brewery-detail-header">
+          <h2 className="brewery-details-name">{breweryToView.name}</h2>
         </div>
-        <div className="contact-info-wrapper">
-          {breweryToView.street && <p className="street">{breweryToView.street}</p>}
-          <p className="brewery-location">{formatLocation(breweryToView.city, breweryToView.state, breweryToView.zip)}</p>
-          {breweryToView.phone && <a className="phone" href={"tel:" + breweryToView.phone}>Phone: {formatPhone(breweryToView.phone)}</a>}
-          <br/>
-          <br/>
-          {breweryToView.website_url && <a className="website-link" href={breweryToView.website_url}>Visit website</a>}
-          <p className="last-updated">Updated: {formatLastUpdated(breweryToView.updated_at)}</p>
+        
+        <div className="brewery-details-image-container">
+         <img className="brewery-details-image" src={breweryToView.image} alt={breweryToView.type}></img>
+        </div>
+
+        <div className="brewery-type-and-contact-wrapper">
+          <div className="brewery-type-updated-wrapper">
+            <p className="brewery-type">Brewery Type: {breweryToView.brewery_type}</p>
+            <p className="last-updated">Updated: {formatLastUpdated(breweryToView.updated_at)}</p>
+          </div>
+
+          <div className="contact-info-wrapper">
+            {breweryToView.street && <p className="street">Address: <br/> {breweryToView.street}</p>}
+            <p className="brewery-location">City, State: <br/> {formatLocation(breweryToView.city, breweryToView.state, breweryToView.zip)}</p>
+            <br/>
+            {breweryToView.phone && <a className="phone" href={"tel:" + breweryToView.phone}>Phone: {formatPhone(breweryToView.phone)}</a>}
+            <br/>
+            {breweryToView.website_url && <a className="website-link" href={breweryToView.website_url}>Visit website</a>}
+          </div>
         </div>
       </div>
+
     </div>
   );
 };

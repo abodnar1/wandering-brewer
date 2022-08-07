@@ -1,36 +1,39 @@
+.back-to-search-link {
+  margin: 1em 0em 1em 0em;
+}
+
 .brewery-details-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 50em;
-  width: 51em;
-  margin: 0.1em;
+  align-items: center;
+  height: 100vh;
+}
+
+.brewery-details-wrapper {
+  height: 60vh;
+  width: 30vw;
   color: black;
   opacity: 0.8;
   background-color: #FFFFFF;
   border-radius: 15px;
 }
 
-.back-to-search-link {
+.brewery-details-image-container {
+  height: 35vh;
   display: flex;
-  flex-direction: row-reverse;
-  margin: 1em 2em 0em 0em;
+  justify-content: center;
+  position: relative;
 }
 
-.type-and-favorite-wrapper {
-  border: 2px solid green;
-}
-
-.details-wrapper {
+.brewery-type-and-contact-wrapper {
   display: flex;
   justify-content: space-evenly;
-  border: 2px solid purple;
 }
 
-.contact-info-wrapper {
-  border: 2px solid red;
-}
-
-.favorite-button {
-  cursor: pointer;
+.brewery-type-updated-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0;
 }
