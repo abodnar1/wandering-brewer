@@ -24,6 +24,11 @@
   cursor: pointer;
 }
 
+.full-beer-icon:hover, 
+.empty-beer-icon:hover  {
+  transform: scale(1.1);
+}
+
 .view-details-link {
   margin: 1em 0em 0em 0em;
   color: black;
