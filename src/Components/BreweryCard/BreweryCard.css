@@ -28,3 +28,7 @@
   margin: 1em 0em 0em 0em;
   color: black;
 }
+
+.view-details-link:hover {
+	text-decoration: underline;
+}
