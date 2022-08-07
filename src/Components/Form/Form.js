@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { fetchBreweriesByCity } from "../../apiCalls";
-import { getCleanData } from "../../utilities"
+import { getCleanData, getBreweryTypeImage } from "../../utilities"
 import "./Form.css";
 
 const Form = ({ breweries, setBreweries, error, setError }) => {
@@ -17,8 +17,12 @@ const Form = ({ breweries, setBreweries, error, setError }) => {
           setError("Oops, check your spelling and try again!");
         } else {
           setError("");
+          console.log("data", data)
           const cleanData = getCleanData(data);
-          setBreweries(cleanData);
+          console.log("cleanData", cleanData)
+          const cleanDataWithImages = getBreweryTypeImage(cleanData);
+          console.log("withImage", cleanDataWithImages)
+          setBreweries(cleanDataWithImages);
         }
       })
       .catch(err => {

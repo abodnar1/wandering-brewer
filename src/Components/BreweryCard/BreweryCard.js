@@ -5,7 +5,7 @@ import { BiBeer } from "react-icons/bi";
 import { FaBeer } from 'react-icons/fa';
 import "./BreweryCard.css";
 
-const BreweryCard = ({ id, name, city, state, type, isFavorite, favorites, setFavorites }) => {
+const BreweryCard = ({ id, name, city, state, type, isFavorite, image, favorites, setFavorites }) => {
   const [favoriteIcon, setFavoriteIcon] = useState(false);
 
   useEffect(() => {
@@ -21,6 +21,7 @@ const BreweryCard = ({ id, name, city, state, type, isFavorite, favorites, setFa
       state,
       type,
       isFavorite: true,
+      image,
       setFavorites
     };
     setFavoriteIcon(true)
@@ -39,6 +40,7 @@ const BreweryCard = ({ id, name, city, state, type, isFavorite, favorites, setFa
     <div className="brewery-card-wrapper">
       <h2 className="brewery-name">{name}</h2>
       <p className="brewery-location">{city}, {state}</p>
+      <img src={image} alt={type}></img>
       {favoriteIcon ? <span className="favorite-icon" onClick={(e) => removeFavorite(e, id)}><FaBeer className="full-beer-icon"/></span> 
       : 
       <span className="favorite-icon" onClick={(e) => addFavorite(e)}><BiBeer className="empty-beer-icon"/></span>}

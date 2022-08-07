@@ -15,6 +15,7 @@ const Breweries = ({ breweries, favorites, setFavorites }) => {
         state={brewery.state}
         type={brewery.brewery_type}
         isFavorite={brewery.isFavorite}
+        image={brewery.image}
         favorites={favorites}
         setFavorites={setFavorites}
       />
@@ -41,6 +42,7 @@ Breweries.propTypes = {
       state: PropTypes.string.isRequired,
       type: PropTypes.string,
       isFavorite: PropTypes.bool.isRequired,
+      image: PropTypes.any,
       favorites: PropTypes.array,
       setFavorites: PropTypes.func
     })
