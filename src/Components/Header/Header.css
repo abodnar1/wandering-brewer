@@ -8,7 +8,10 @@
   border-bottom: 1px solid #828181;
 }
 
-.app-title,
 .favorites-link {
   color: black;
+}
+
+.logo-home {
+  height: 5em;
 }
