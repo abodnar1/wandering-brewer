@@ -4,7 +4,7 @@
   margin: 0.5em;
   color: black;
   opacity: 0.8;
-  background-color: #E7E7E7;
+  background-color: #FFFFFF;
   border-radius: 15px;
 }
 
@@ -24,7 +24,16 @@
   cursor: pointer;
 }
 
+.full-beer-icon:hover, 
+.empty-beer-icon:hover  {
+  transform: scale(1.1);
+}
+
 .view-details-link {
   margin: 1em 0em 0em 0em;
   color: black;
+}
+
+.view-details-link:hover {
+	text-decoration: underline;
 }

@@ -1,10 +1,10 @@
 .favorite-card-wrapper {
-  height: 15em;
+  height: 22em;
   width: 20em;
   margin: 0.5em;
   color: black;
   opacity: 0.8;
-  background-color: #E7E7E7;
+  background-color: #FFFFFF;
   border-radius: 15px;
 }
 
@@ -15,10 +15,23 @@
 }
 
 .favorite-location {
-  height: 20%
+  height: 15%
 }
 
 .remove-favorite-button {
-  cursor: pointer;
   font-size: 2em;
+  cursor: pointer;
+}
+
+.remove-favorite-button:hover {
+  transform: scale(1.1);
+}
+
+.view-details-link {
+  margin: 1em 0em 0em 0em;
+  color: black;
+}
+
+.view-details-link:hover {
+	text-decoration: underline;
 }
