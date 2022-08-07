@@ -16,6 +16,7 @@ const Favorites = ({ favorites, setFavorites }) => {
         state={favorite.state}
         type={favorite.type}
         isFavorite={favorite.isFavorite}
+        image={favorite.image}
         favorites={favorites}
         setFavorites={setFavorites}
       />
@@ -37,7 +38,6 @@ const Favorites = ({ favorites, setFavorites }) => {
 export default Favorites;
 
 Favorites.propTypes = {
-  setFavorites: PropTypes.func,
   favorites: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -46,8 +46,8 @@ Favorites.propTypes = {
       state: PropTypes.string.isRequired,
       type: PropTypes.string,
       isFavorite: PropTypes.bool.isRequired,
-      favorites: PropTypes.array,
-      setFavorites: PropTypes.func
+      image: PropTypes.string
     })
-  )
+  ),
+    setFavorites: PropTypes.func
 };
