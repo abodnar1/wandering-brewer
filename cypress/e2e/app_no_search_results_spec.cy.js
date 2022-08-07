@@ -1,4 +1,4 @@
-describe("Wandering Brewer Main Page Without Search Results", () => {
+describe("Wandering Brewer App - No Search Results", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000/")
   });

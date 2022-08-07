@@ -1,11 +1,10 @@
-describe("Wandering Brewer Main Page With Search Results", () => {
+describe("Wandering Brewer App - With Search Results", () => {
   beforeEach(() => {
     cy.intercept("GET", "https://api.openbrewerydb.org/breweries?by_city=savannah", {
       statusCode: 200,
       fixture: "savannah_breweries"
     })
     .visit("http://localhost:3000/")
-    // how to run the test for cleaning data?
   });
 
   it("should have a form to enter a city and display that city's breweries", () => {

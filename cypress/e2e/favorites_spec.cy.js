@@ -5,7 +5,6 @@ describe("Wandering Brewer Favoriting Functionality", () => {
       fixture: "savannah_breweries"
     })
     .visit("http://localhost:3000/")
-    // how to run the test for cleaning data?
     .get("input[name='city']").type("savannah")
     .get(".search-button").click()
     .get(".favorite-icon").first().click()
@@ -27,5 +26,4 @@ describe("Wandering Brewer Favoriting Functionality", () => {
     cy.get(".back-to-search-link").contains("span", "back to search").click()
     .url().should("eq", "http://localhost:3000/")
   });
-
 });
