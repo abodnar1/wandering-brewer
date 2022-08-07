@@ -12,6 +12,8 @@ const Form = ({ breweries, setBreweries, error, setError }) => {
     
     fetchBreweriesByCity(city)
       .then(data => {
+        // add some error handling here?
+        // if the data does not exist, say check the spelling of the city and try again?
         const cleanData = getCleanData(data)
         setBreweries(cleanData)
       })
@@ -28,7 +30,10 @@ const Form = ({ breweries, setBreweries, error, setError }) => {
 
   return (
     <div className="form-container">
-      <h2 className="site-info">Type in any city in the US!</h2>
+      <p className="site-info">
+        This app was designed for beer lovers who are looking<br />
+        to keep tabs on their favorite breweries while traveling.<br />
+      </p>
       <form>
         <input className="city-search" 
           type="text"
