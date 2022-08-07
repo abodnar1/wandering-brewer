@@ -8,3 +8,7 @@
   flex-wrap: wrap;
   align-items: center;
 }
+
+.back-to-search-link-favorites{
+  margin-top: 10px;
+}
