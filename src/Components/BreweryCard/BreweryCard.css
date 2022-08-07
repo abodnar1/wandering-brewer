@@ -3,11 +3,14 @@
   width: 20em;
   margin: 0.5em;
   color: black;
-  border: 2px solid teal;
+  opacity: 0.8;
+  background-color: #E7E7E7;
+  border-radius: 15px;
 }
 
 .brewery-name {
   height: 25%;
+  padding-top: 1em;
   overflow-wrap: break-word;
 }
 
