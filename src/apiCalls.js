@@ -4,7 +4,7 @@ const fetchBreweriesByCity = (city) => {
     if (res.ok) {
       return res.json()
     } else {
-      console.log("Oops! Something went wrong.")
+      throw new Error("Oops! Something went wrong. Please try again")
     }
   });
 };

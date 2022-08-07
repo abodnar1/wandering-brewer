@@ -13,12 +13,12 @@ const Form = ({ breweries, setBreweries, error, setError }) => {
     fetchBreweriesByCity(city)
       .then(data => {
         if (data.length === 0) {
-          setBreweries([])
-          setError("Oops, check your spelling and try again!")
+          setBreweries([]);
+          setError("Oops, check your spelling and try again!");
         } else {
-          setError("")
-          const cleanData = getCleanData(data)
-          setBreweries(cleanData)
+          setError("");
+          const cleanData = getCleanData(data);
+          setBreweries(cleanData);
         }
       })
       .catch(err => {
