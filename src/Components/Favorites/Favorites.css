@@ -3,10 +3,7 @@
   grid-template-columns: repeat(4, 1fr);
   justify-content: space-evenly;
   justify-items: center;
+  align-items: center;
   height: 100vh;
+  overflow: scroll;
 }
-/* 
-.error-message {
-  font-size: 2em;
-  color: red;
-} */
