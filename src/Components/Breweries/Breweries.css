@@ -1,7 +1,10 @@
 .breweries-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  border: 2px solid black;
+  /* background-image: url("../../assets/cans.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; */
+  height: 100vh;
 }
 
 .error-message {
