@@ -15,6 +15,7 @@ const Breweries = ({ breweries, favorites, setFavorites }) => {
         state={brewery.state}
         type={brewery.brewery_type}
         isFavorite={brewery.isFavorite}
+        image={brewery.image}
         favorites={favorites}
         setFavorites={setFavorites}
       />
@@ -24,7 +25,6 @@ const Breweries = ({ breweries, favorites, setFavorites }) => {
   return (
     <div className="breweries-container">
       {breweriesByCity}
-      {/* {breweries.length ? breweriesByCity : <h3 className="no-search-results-message">Choose a city to search!</h3>} */}
     </div>
   );
 };
@@ -32,7 +32,6 @@ const Breweries = ({ breweries, favorites, setFavorites }) => {
 export default Breweries;
 
 Breweries.propTypes = {
-  error: PropTypes.string,
   breweries: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -41,8 +40,9 @@ Breweries.propTypes = {
       state: PropTypes.string.isRequired,
       type: PropTypes.string,
       isFavorite: PropTypes.bool.isRequired,
-      favorites: PropTypes.array,
-      setFavorites: PropTypes.func
+      image: PropTypes.string
     })
-  )
+  ),
+  favorites: PropTypes.array,
+  setFavorites: PropTypes.func.isRequired
 };

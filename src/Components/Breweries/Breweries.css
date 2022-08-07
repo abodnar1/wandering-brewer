@@ -8,3 +8,15 @@
   background-color: #CEE1CD;
   overflow: scroll;
 }
+
+@media only screen and (max-width: 900px) {
+  .breweries-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .breweries-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -5,7 +5,7 @@ import { BiBeer } from "react-icons/bi";
 import { FaBeer } from 'react-icons/fa';
 import "./BreweryCard.css";
 
-const BreweryCard = ({ id, name, city, state, type, isFavorite, favorites, setFavorites }) => {
+const BreweryCard = ({ id, name, city, state, type, isFavorite, image, favorites, setFavorites }) => {
   const [favoriteIcon, setFavoriteIcon] = useState(false);
 
   useEffect(() => {
@@ -21,6 +21,7 @@ const BreweryCard = ({ id, name, city, state, type, isFavorite, favorites, setFa
       state,
       type,
       isFavorite: true,
+      image,
       setFavorites
     };
     setFavoriteIcon(true)
@@ -37,11 +38,16 @@ const BreweryCard = ({ id, name, city, state, type, isFavorite, favorites, setFa
 
   return (
     <div className="brewery-card-wrapper">
+      <div className="favorite-icon-container">
+        {favoriteIcon ? <span className="favorite-icon" onClick={(e) => removeFavorite(e, id)}><FaBeer className="full-beer-icon"/></span> 
+        : 
+        <span className="favorite-icon" onClick={(e) => addFavorite(e)}><BiBeer className="empty-beer-icon"/></span>}
+      </div>
       <h2 className="brewery-name">{name}</h2>
       <p className="brewery-location">{city}, {state}</p>
-      {favoriteIcon ? <span className="favorite-icon" onClick={(e) => removeFavorite(e, id)}><FaBeer className="full-beer-icon"/></span> 
-      : 
-      <span className="favorite-icon" onClick={(e) => addFavorite(e)}><BiBeer className="empty-beer-icon"/></span>}
+      <div className="brewery-image-container">
+        <img className="brewery-type-image" src={image} alt={type}></img>
+      </div>
       <Link to={`/${id}`} style={{textDecoration: "none"}}>
        <p className="view-details-link">View details</p>
       </Link>
@@ -58,6 +64,7 @@ BreweryCard.propTypes = {
   state: PropTypes.string.isRequired,
   type: PropTypes.string,
   isFavorite: PropTypes.bool,
+  image: PropTypes.string,
   favorites: PropTypes.array,
-  setFavorites: PropTypes.func
+  setFavorites: PropTypes.func.isRequired
 };

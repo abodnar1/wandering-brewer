@@ -16,6 +16,7 @@ const Favorites = ({ favorites, setFavorites }) => {
         state={favorite.state}
         type={favorite.type}
         isFavorite={favorite.isFavorite}
+        image={favorite.image}
         favorites={favorites}
         setFavorites={setFavorites}
       />
@@ -24,9 +25,11 @@ const Favorites = ({ favorites, setFavorites }) => {
 
   return (
     <>
-      <Link to="/">
-          <span className="back-to-search-link">back to search</span>
-      </Link>
+      <div className="back-to-search-link-favorites">
+        <Link to="/">
+           <span>back to search</span>
+        </Link>
+      </div>
       <div className="favorites-container">
         {favorites.length ? favoriteBreweries : <h3 className="no-favorites-message">You haven't added any favorites yet!</h3>}
       </div>
@@ -37,7 +40,6 @@ const Favorites = ({ favorites, setFavorites }) => {
 export default Favorites;
 
 Favorites.propTypes = {
-  setFavorites: PropTypes.func,
   favorites: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -46,8 +48,8 @@ Favorites.propTypes = {
       state: PropTypes.string.isRequired,
       type: PropTypes.string,
       isFavorite: PropTypes.bool.isRequired,
-      favorites: PropTypes.array,
-      setFavorites: PropTypes.func
+      image: PropTypes.string
     })
-  )
+  ),
+    setFavorites: PropTypes.func
 };
