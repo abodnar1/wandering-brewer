@@ -23,6 +23,10 @@
   height: 12%
 }
 
+.brewery-image-container {
+  width: inherit;
+}
+
 .brewery-type-image {
   width: auto;
   max-width: 150px;
