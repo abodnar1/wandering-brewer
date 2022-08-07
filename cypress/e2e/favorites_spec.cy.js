@@ -1,4 +1,4 @@
-describe("Wandering Brewer Favoriting Functionality", () => {
+describe("Wandering Brewer - Favorites", () => {
   beforeEach(() => {
     cy.intercept("GET", "https://api.openbrewerydb.org/breweries?by_city=savannah", {
       statusCode: 200,

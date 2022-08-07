@@ -21,3 +21,9 @@ button:disabled {
 .search-button {
   cursor: pointer;
 }
+
+.error-message {
+  color: red;
+  font-style: italic;
+  padding-bottom: 1em;
+}

@@ -3,14 +3,13 @@ describe("Wandering Brewer App - No Search Results", () => {
     cy.visit("http://localhost:3000/")
   });
 
-  it("should have a header with a title", () => {
-    cy.get(".app-title").contains("h1", "Wandering Brewer")
-    .get(".no-search-results-message").contains("h3", "Choose a city to search!")
+  it("should have a header with a title and home logo button", () => {
+    cy.get(".app-title").contains("h1", "Wandering Brewer").click()
+    .url().should("eq", "http://localhost:3000/")
   });
 
   it("should have a header with a link to view favorites", () => {
-    cy.get(".favorites-link").click()
+    cy.get(".favorites-link").contains("p", "Favorites").click()
     .url().should("eq", "http://localhost:3000/favorites")
-    .get(".no-favorites-message").contains("h3", "You haven't added any favorites yet!")
   });
 }); 
