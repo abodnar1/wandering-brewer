@@ -4,20 +4,9 @@ const fetchBreweriesByCity = (city) => {
     if (res.ok) {
       return res.json()
     } else {
-      throw new Error("Oops! Something went wrong.")
+      throw new Error("Oops! Something went wrong. Please try again")
     }
   });
 };
 
-const fetchBreweryById = (id) => {
-  return fetch(`https://api.openbrewerydb.org/breweries/${id}`)
-  .then(res => {
-    if (res.ok) {
-      return res.json()
-    } else {
-      throw new Error("Oops! Something went wrong.")
-    }
-  })
-}
-
-export { fetchBreweriesByCity, fetchBreweryById };
+export { fetchBreweriesByCity };

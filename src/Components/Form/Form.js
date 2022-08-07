@@ -12,13 +12,17 @@ const Form = ({ breweries, setBreweries, error, setError }) => {
     
     fetchBreweriesByCity(city)
       .then(data => {
-        // add some error handling here?
-        // if the data does not exist, say check the spelling of the city and try again?
-        const cleanData = getCleanData(data)
-        setBreweries(cleanData)
+        if (data.length === 0) {
+          setBreweries([]);
+          setError("Oops, check your spelling and try again!");
+        } else {
+          setError("");
+          const cleanData = getCleanData(data);
+          setBreweries(cleanData);
+        }
       })
       .catch(err => {
-        setError(err.message)
+        setError(`Oops! Something went wrong. ${err.message}. Please try again.`)
       });
 
     clearForm();
@@ -33,7 +37,7 @@ const Form = ({ breweries, setBreweries, error, setError }) => {
       <p className="site-info">
         This app was designed for beer lovers who are looking<br/>
         to keep tabs on their favorite breweries while traveling.<br/>
-        Start by typing in the city you're visiting.
+        Start by typing in the city you're visiting to see what's around!
       </p>
       <form>
         <input className="city-search" 
@@ -45,8 +49,8 @@ const Form = ({ breweries, setBreweries, error, setError }) => {
         />
         <button className="search-button" disabled={!city} onClick={(e) => handleClick(e)}>Search</button>
       </form>
-      {error && <p className="error-message">Oops! Something went wrong. Please try again. <br/> {error}</p>}
-      {/* {breweries.length === 0 && <h3 className="no-search-results-message">Choose a city to search!</h3>} */}
+      {error && <p className="error-message">{error}</p>}
+      {!error && breweries.length === 0 && <h3 className="no-search-results-message">Start looking for breweries in your area!</h3>}
     </div>
   );
 };
