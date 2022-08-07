@@ -48,7 +48,7 @@ const BreweryCard = ({ id, name, city, state, type, isFavorite, favorites, setFa
       {/* <span className="favorite-icon" onClick={(e) => addFavorite(e)}><AiOutlineHeart className="add-heart"/></span> */}
       {/* <button className="add-favorite-button" disabled={isFavorite} onClick={(e) => addFavorite(e)}>Add to Favorites</button> */}
       <Link to={`/${id}`} style={{textDecoration: "none"}}>
-       <p className="view-details">View details</p>
+       <p className="view-details-link">View details</p>
       </Link>
     </div>
   );

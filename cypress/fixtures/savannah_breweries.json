@@ -1,0 +1,28 @@
+[
+  {
+    "id": "moon-river-brewing-co-savannah",
+    "name": "Moon River Brewing Co",
+    "brewery_type": "brewpub",
+    "street": "21 W Bay St",
+    "city": "Savannah",
+    "state": "Georgia",
+    "postal_code": "31401-1106",
+    "phone": "9124470943",
+    "website_url": "http://www.moonriverbrewing.com",
+    "updated_at": "2021-10-23T02:24:55.243Z",
+    "isFavorite": "false"
+  },
+  {
+    "id": "two-tides-brewing-company-savannah",
+    "name": "Two Tides Brewing Company",
+    "brewery_type": "micro",
+    "street": "12 West 41st St",
+    "city": "Savannah",
+    "state": "Georgia",
+    "postal_code": "31401",
+    "phone": "9126670706",
+    "website_url": "http://www.twotidesbrewing.com",
+    "updated_at": "2021-10-23T02:24:55.243Z",
+    "isFavorite": "false"
+  }
+]

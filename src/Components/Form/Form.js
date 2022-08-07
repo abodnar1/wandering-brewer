@@ -18,7 +18,7 @@ const Form = ({ breweries, setBreweries, error, setError }) => {
         setBreweries(cleanData)
       })
       .catch(err => {
-        setError("Oops! Something went wrong. Please try again")
+        setError(err.message)
       });
 
     clearForm();
@@ -31,8 +31,9 @@ const Form = ({ breweries, setBreweries, error, setError }) => {
   return (
     <div className="form-container">
       <p className="site-info">
-        This app was designed for beer lovers who are looking<br />
-        to keep tabs on their favorite breweries while traveling.<br />
+        This app was designed for beer lovers who are looking<br/>
+        to keep tabs on their favorite breweries while traveling.<br/>
+        Start by typing in the city you're visiting.
       </p>
       <form>
         <input className="city-search" 
@@ -44,7 +45,8 @@ const Form = ({ breweries, setBreweries, error, setError }) => {
         />
         <button className="search-button" disabled={!city} onClick={(e) => handleClick(e)}>Search</button>
       </form>
-      {breweries.length === 0 && <h3 className="no-search-results-message">Choose a city to search!</h3>}
+      {error && <p className="error-message">Oops! Something went wrong. Please try again. <br/> {error}</p>}
+      {/* {breweries.length === 0 && <h3 className="no-search-results-message">Choose a city to search!</h3>} */}
     </div>
   );
 };

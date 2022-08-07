@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import "./Favorites.css";
 import FavoriteCard from "../FavoriteCard/FavoriteCard";
 
@@ -22,9 +23,14 @@ const Favorites = ({ favorites, setFavorites }) => {
   });
 
   return (
-    <div className="favorites-container">
-      {favorites.length ? favoriteBreweries : <h3 className="no-favorites-message">You haven't added any favorites yet!</h3>}
-    </div>
+    <>
+      <Link to="/">
+          <span className="back-to-search-link">back to search</span>
+      </Link>
+      <div className="favorites-container">
+        {favorites.length ? favoriteBreweries : <h3 className="no-favorites-message">You haven't added any favorites yet!</h3>}
+      </div>
+    </>
   );
 };
 
