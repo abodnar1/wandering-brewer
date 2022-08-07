@@ -42,7 +42,7 @@ Breweries.propTypes = {
       state: PropTypes.string.isRequired,
       type: PropTypes.string,
       isFavorite: PropTypes.bool.isRequired,
-      image: PropTypes.any,
+      image: PropTypes.string,
       favorites: PropTypes.array,
       setFavorites: PropTypes.func
     })

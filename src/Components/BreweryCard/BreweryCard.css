@@ -9,13 +9,20 @@
 }
 
 .brewery-name {
-  height: 25%;
-  padding-top: 1em;
+  height: 10%;
+  /* padding-top: 1em; */
   overflow-wrap: break-word;
 }
 
 .brewery-location {
-  height: 15%
+  height: 12%
+}
+
+.brewery-type-image {
+  width: auto;
+  max-width: 150px;
+  height: auto;
+  max-height: 100px;
 }
 
 .full-beer-icon, 

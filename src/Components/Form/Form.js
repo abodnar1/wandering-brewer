@@ -17,11 +17,11 @@ const Form = ({ breweries, setBreweries, error, setError }) => {
           setError("Oops, check your spelling and try again!");
         } else {
           setError("");
-          console.log("data", data)
+          // console.log("data", data)
           const cleanData = getCleanData(data);
-          console.log("cleanData", cleanData)
+          // console.log("cleanData", cleanData)
           const cleanDataWithImages = getBreweryTypeImage(cleanData);
-          console.log("withImage", cleanDataWithImages)
+          // console.log("withImage", cleanDataWithImages)
           setBreweries(cleanDataWithImages);
         }
       })
