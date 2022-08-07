@@ -35,23 +35,22 @@ const BreweryCard = ({ id, name, city, state, type, isFavorite, favorites, setFa
     setFavorites(updatedFavorites);
   };
 
-
-
   return (
-    <Link to={`/${id}`} style={{textDecoration: "none"}}>
-      <div className="brewery-card-wrapper">
-        <h2 className="brewery-name">{name}</h2>
-        <p className="brewery-location">{city}, {state}</p>
-        {/* <div className="brewery-type"> */}
-          {/* <p className="brewery-type">Type: {type}</p>
-        </div> */}
-        {favoriteIcon ? <span className="favorite-icon" onClick={(e) => removeFavorite(e, id)}><FaBeer className="full-beer-icon"/></span> 
-				: 
-				<span className="favorite-icon" onClick={(e) => addFavorite(e)}><BiBeer className="empty-beer-icon"/></span>}
-        {/* <span className="favorite-icon" onClick={(e) => addFavorite(e)}><AiOutlineHeart className="add-heart"/></span> */}
-        {/* <button className="add-favorite-button" disabled={isFavorite} onClick={(e) => addFavorite(e)}>Add to Favorites</button> */}
-      </div>
-    </Link>
+    <div className="brewery-card-wrapper">
+      <h2 className="brewery-name">{name}</h2>
+      <p className="brewery-location">{city}, {state}</p>
+      {/* <div className="brewery-type"> */}
+        {/* <p className="brewery-type">Type: {type}</p>
+      </div> */}
+      {favoriteIcon ? <span className="favorite-icon" onClick={(e) => removeFavorite(e, id)}><FaBeer className="full-beer-icon"/></span> 
+      : 
+      <span className="favorite-icon" onClick={(e) => addFavorite(e)}><BiBeer className="empty-beer-icon"/></span>}
+      {/* <span className="favorite-icon" onClick={(e) => addFavorite(e)}><AiOutlineHeart className="add-heart"/></span> */}
+      {/* <button className="add-favorite-button" disabled={isFavorite} onClick={(e) => addFavorite(e)}>Add to Favorites</button> */}
+      <Link to={`/${id}`} style={{textDecoration: "none"}}>
+       <p className="view-details">View details</p>
+      </Link>
+    </div>
   );
 };
 
