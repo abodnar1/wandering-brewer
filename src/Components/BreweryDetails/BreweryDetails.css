@@ -10,7 +10,7 @@
 }
 
 .brewery-details-wrapper {
-  height: 70vh;
+  height: 80vh;
   width: 30vw;
   color: black;
   opacity: 0.8;
@@ -39,4 +39,18 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .brewery-details-wrapper {
+    width: 40vh;
+  }
+
+  .brewery-details-image-container {
+    width: inherit;
+  }
+
+  .brewery-details-image {
+    width: inherit;
+  }
 }
