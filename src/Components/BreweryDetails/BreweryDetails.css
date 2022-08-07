@@ -1,12 +1,12 @@
 .brewery-details-container {
   border: 2px solid blue;
-  margin: 2em;
+  margin: 4em;
 }
 
 .back-to-search-link {
   display: flex;
   flex-direction: row-reverse;
-  margin-right: 2em;
+  margin: 1em 2em 0em 0em;
 }
 
 .type-and-favorite-wrapper {
