@@ -25,7 +25,6 @@ const Breweries = ({ breweries, favorites, setFavorites }) => {
   return (
     <div className="breweries-container">
       {breweriesByCity}
-      {/* {breweries.length ? breweriesByCity : <h3 className="no-search-results-message">Choose a city to search!</h3>} */}
     </div>
   );
 };
@@ -33,7 +32,6 @@ const Breweries = ({ breweries, favorites, setFavorites }) => {
 export default Breweries;
 
 Breweries.propTypes = {
-  error: PropTypes.string,
   breweries: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -43,8 +41,8 @@ Breweries.propTypes = {
       type: PropTypes.string,
       isFavorite: PropTypes.bool.isRequired,
       image: PropTypes.string,
-      favorites: PropTypes.array,
-      setFavorites: PropTypes.func
     })
-  )
+  ),
+  favorites: PropTypes.array,
+  setFavorites: PropTypes.func.isRequired
 };

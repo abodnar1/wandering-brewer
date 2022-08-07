@@ -61,8 +61,8 @@ BreweryCard.propTypes = {
   city: PropTypes.string.isRequired,
   state: PropTypes.string.isRequired,
   type: PropTypes.string,
-  image: PropTypes.string,
   isFavorite: PropTypes.bool,
+  image: PropTypes.string,
   favorites: PropTypes.array,
-  setFavorites: PropTypes.func
+  setFavorites: PropTypes.func.isRequired
 };
