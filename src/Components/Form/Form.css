@@ -1,16 +1,14 @@
 .form-container{
   color: black;
-  background-color: #E7E7E7;
-  opacity: 0.8;
 }
 
 .site-info {
-  margin: 0;
   padding-top: 1em;
 }
 
 .city-search {
   width: 20em;
+  height: 1.5em;
   margin: 1em 0em 2em 0em;
 }
 
@@ -19,6 +17,9 @@ button:disabled {
 }
 
 .search-button {
+  width: 8em;
+  height: 2em;
+  margin: 1em;
   cursor: pointer;
 }
 

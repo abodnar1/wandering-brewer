@@ -1,7 +1,8 @@
 .app {
   text-align: center;
-  background-image: url(../../assets/hops.jpg);
+  background-color: #CEE1CD;
+  /* background-image: url(../../assets/hops.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
-  height: auto;
+  /* background-repeat: no-repeat; */
+  /* height: auto; */
 }
