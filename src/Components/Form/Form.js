@@ -4,7 +4,7 @@ import { fetchBreweriesByCity } from "../../apiCalls";
 import { getCleanData } from "../../utilities"
 import "./Form.css";
 
-const Form = ({ setBreweries, error, setError }) => {
+const Form = ({ breweries, setBreweries, error, setError }) => {
   const [city, setCity] = useState("");
 
   const handleClick = (e) => {  
@@ -28,7 +28,7 @@ const Form = ({ setBreweries, error, setError }) => {
 
   return (
     <div className="form-container">
-      <h2 className="site-info">Type in a city below & see which breweries are in your area!</h2>
+      <h2 className="site-info">Type in any city in the US!</h2>
       <form>
         <input className="city-search" 
           type="text"
@@ -39,6 +39,7 @@ const Form = ({ setBreweries, error, setError }) => {
         />
         <button className="search-button" disabled={!city} onClick={(e) => handleClick(e)}>Search</button>
       </form>
+      {breweries.length === 0 && <h3 className="no-search-results-message">Choose a city to search!</h3>}
     </div>
   );
 };

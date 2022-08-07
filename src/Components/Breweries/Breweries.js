@@ -23,7 +23,8 @@ const Breweries = ({ breweries, favorites, setFavorites }) => {
 
   return (
     <div className="breweries-container">
-      {breweries.length ? breweriesByCity : <h3 className="no-search-results-message">Choose a city to search!</h3>}
+      {breweriesByCity}
+      {/* {breweries.length ? breweriesByCity : <h3 className="no-search-results-message">Choose a city to search!</h3>} */}
     </div>
   );
 };
