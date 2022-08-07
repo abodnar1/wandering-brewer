@@ -8,7 +8,7 @@ describe("Wandering Brewer - Favorites", () => {
     .get("input[name='city']").type("savannah")
     .get(".search-button").click()
     .get(".favorite-icon").first().click()
-    .get(".favorites-link").contains("p", "Favorites").click()
+    .get(".favorites-link").contains("Favorites").click()
   });
 
   it("should have one brewery in the favorites container", () => {
