@@ -1,5 +1,5 @@
 .brewery-card-wrapper {
-  height: 15em;
+  height: 22em;
   width: 20em;
   margin: 0.5em;
   color: black;
@@ -15,11 +15,16 @@
 }
 
 .brewery-location {
-  height: 20%
+  height: 15%
 }
 
 .full-beer-icon, 
 .empty-beer-icon {
   font-size: 3em;
   cursor: pointer;
+}
+
+.view-details {
+  margin: 1em 0em 0em 0em;
+  color: black;
 }
