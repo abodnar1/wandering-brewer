@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <Header />
+      <Header setBreweries={setBreweries} />
       
       <Switch>
         <Route exact path="/">

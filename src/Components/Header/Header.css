@@ -8,10 +8,20 @@
   border-bottom: 1px solid #828181;
 }
 
+.logo-home {
+  height: 5em;
+  text-decoration: none;
+}
+
 .favorites-link {
+  text-decoration: none;
   color: black;
 }
 
-.logo-home {
-  height: 5em;
+.favorites-link:hover {
+	text-decoration: underline;
+}
+
+.active {
+	text-decoration: underline;
 }
