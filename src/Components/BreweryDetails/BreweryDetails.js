@@ -34,7 +34,6 @@ const BreweryDetails = ({ breweryToView }) => {
         </Link>
         <h2 className="brewery-details-name">{breweryToView.name}</h2>
       </div>
-      {/* <img src={twotides1} alt="Columns of cans with a pint full of beer"></img> */}
       <div className="details-wrapper">
         <div className="type-and-favorite-wrapper">
           <p className="brewery-type">Type: {breweryToView.brewery_type}</p>
@@ -55,3 +54,5 @@ const BreweryDetails = ({ breweryToView }) => {
 };
 
 export default BreweryDetails;
+
+// add proptypes

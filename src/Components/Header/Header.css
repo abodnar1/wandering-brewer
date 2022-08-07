@@ -4,7 +4,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 0em 3em 0em 1em;
-  background-color: #E7E7E7;
+  opacity: 0.8;
+  background-color: #FFFFFF;
   border-bottom: 1px solid #828181;
 }
 
