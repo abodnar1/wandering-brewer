@@ -5,7 +5,6 @@ import { FaTrash } from 'react-icons/fa';
 import "./FavoriteCard.css";
 
 const FavoriteCard = ({ id, name, city, state, type, isFavorite, image, favorites, setFavorites }) => {
-
   const removeFavorite = (e, id) => {
     e.preventDefault();
     isFavorite = false;

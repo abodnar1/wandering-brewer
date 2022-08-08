@@ -5,7 +5,6 @@ import "./Favorites.css";
 import FavoriteCard from "../FavoriteCard/FavoriteCard";
 
 const Favorites = ({ favorites, setFavorites }) => {
-
   const favoriteBreweries = favorites.map(favorite => {
     return (
       <FavoriteCard 

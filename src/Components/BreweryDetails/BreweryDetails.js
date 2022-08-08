@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./BreweryDetails.css";
 
 const BreweryDetails = ({ breweryToView }) => {
-
   const formatLocation = (city, state, zip) => {
     if (!zip) {
       return `${city}, ${state}`;
@@ -23,31 +22,26 @@ const BreweryDetails = ({ breweryToView }) => {
   const formatLastUpdated = (date) => {
     let lastUpdatedDate = new Date(date);
     let options = {year: "numeric", month: "short", day: "numeric"};
-    return lastUpdatedDate.toLocaleString("en-us", options)
-  }
+    return lastUpdatedDate.toLocaleString("en-us", options);
+  };
 
   return (
     <div className="brewery-details-container">
-
       <Link to="/">
         <div className="back-to-search-link">back to search</div>
       </Link>
-
       <div className="brewery-details-wrapper">
         <div className="brewery-detail-header">
           <h2 className="brewery-details-name">{breweryToView.name}</h2>
         </div>
-        
         <div className="brewery-details-image-container">
          <img className="brewery-details-image" src={breweryToView.image} alt={breweryToView.type}></img>
         </div>
-
         <div className="brewery-type-and-contact-wrapper">
           <div className="brewery-type-updated-wrapper">
             <p className="brewery-type">Brewery Type: {breweryToView.brewery_type}</p>
             <p className="last-updated">Updated: {formatLastUpdated(breweryToView.updated_at)}</p>
           </div>
-
           <div className="contact-info-wrapper">
             {breweryToView.street && <p className="street">Address: <br/> {breweryToView.street}</p>}
             <p className="brewery-location">City, State: <br/> {formatLocation(breweryToView.city, breweryToView.state, breweryToView.zip)}</p>
@@ -58,7 +52,6 @@ const BreweryDetails = ({ breweryToView }) => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };

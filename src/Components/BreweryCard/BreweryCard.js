@@ -24,14 +24,14 @@ const BreweryCard = ({ id, name, city, state, type, isFavorite, image, favorites
       image,
       setFavorites
     };
-    setFavoriteIcon(true)
+    setFavoriteIcon(true);
     setFavorites([...favorites, newFavorite]);
   };
 
   const removeFavorite = (e, id) => {
     e.preventDefault();
     isFavorite = false;
-    setFavoriteIcon(false)
+    setFavoriteIcon(false);
     const updatedFavorites = favorites.filter(favorite => favorite.id !== id);
     setFavorites(updatedFavorites);
   };
@@ -41,7 +41,8 @@ const BreweryCard = ({ id, name, city, state, type, isFavorite, image, favorites
       <div className="favorite-icon-container">
         {favoriteIcon ? <span className="favorite-icon" onClick={(e) => removeFavorite(e, id)}><FaBeer className="full-beer-icon"/></span> 
         : 
-        <span className="favorite-icon" onClick={(e) => addFavorite(e)}><BiBeer className="empty-beer-icon"/></span>}
+        <span className="favorite-icon" onClick={(e) => addFavorite(e)}><BiBeer className="empty-beer-icon"/></span>
+        }
       </div>
       <h2 className="brewery-name">{name}</h2>
       <p className="brewery-location">{city}, {state}</p>

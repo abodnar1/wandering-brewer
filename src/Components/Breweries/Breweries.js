@@ -4,7 +4,6 @@ import "./Breweries.css";
 import BreweryCard from "../BreweryCard/BreweryCard";
 
 const Breweries = ({ breweries, favorites, setFavorites }) => {
-
   const breweriesByCity = breweries.map(brewery => {
     return (
       <BreweryCard 
