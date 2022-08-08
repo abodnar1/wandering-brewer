@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# [Wandering Brewer]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Learning Goals](#learning-goals)
+- [Technologies and Tools](#technologies-and-tools)
+- [Deployed Page](#deployed-page)
+- [Project Reflections](#project-reflections)
+- [Roadmap](#roadmap)
+- [Setup](#setup)
+- [Contributors](#contributors)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Project Overview
+This application was built for a brewer on the go! The goal was to have the brewer be able to search whatever city they were visiting and see which breweries were nearby. On the detailed viewing page, the brewer can see the address, website, and phone number of the spot they want to visit. They can also favorite the brewery so that they remember to go to it the next time they're in town!
 
-### `npm start`
+[VISUALS GO HERE]
+![](name-of-giphy.gif)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The [Turing School of Software and Design](https://turing.edu/) provided a project spec sheet for students to follow, which can be found [here](https://frontend.turing.edu/projects/module-3/showcase.html).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Learning Goals
+To demonstrate our learning on topics that include React, React Router, Asynchronous JavaScript, and end-to-end testing with Cypress. User personas and user stories were to be utilized to target a niche audience.
+Core functionality needed to include:
+* Displaying data from an API in such a way that applies directly to the target audience
+* Ability for users to store/manipulate the displayed data (ie. favoriting)
+* Multiple views handled by Router
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Technologies and Tools
+* React
+* React Router
+* JavaScript
+* REST API
+* Postman
+* HTML
+* CSS
+* Cypress Testing
+* npm
+* Webpack
+* GitHub Issues
+* GitHub Projects
+* Excalidraw (wireframes)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployed Page
+You can access this project through the deployed page [here](https://wandering-brewer.herokuapp.com/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Project Reflections
+#### Wins
+* The API had many null data values and had properties that were not needed for the scope of the application. A cleaning function was used to grab only the data needed upon the GET network request.
+* The data was not equipped with images, so they were added within the cleaning function based on the type of brewery (ie. all microbreweries were assigned the same photos while all nanobreweries were assigned a different one and so on and so forth).
+* Achieving minimum viable product (MVP) within a short time frame of 6 days.
+* Responsive CSS that is compatible with mobile screen sizes.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Challenges
+* Working within the tight time constraint. There was not much room for pivoting when something didn't work out. Decision making had to be fast but thoughtful.
+* My audience was not niche enough which made styling a major hurdle.
+* The website links used on the `BreweryDetails` component needed to be updated in the API. Some redirects work when clicked while others did not.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Roadmap
+Future features could include:
+* Update styling and improve contact info on the details page (ie. Instagram, Twitter, Facebook)
+* Add local storage so that a user can see their favorites each time they visit the site.
+* Add a section that allows the user to make notes about their visit or rate the brewery.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Setup
+1. Fork this Repo
+2. Clone it down to your machine
+3. `cd` into the root of the project directory
+4. Run `npm install`
+5. Run `npm start`
 
-## Learn More
+For Cypress Testing:
+1. Run `npm run cypress`
+2. Follow the prompts in the browser and select the spec file you want to run
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contributors
+Amber Bodnar
+* [LinkedIn](https://www.linkedin.com/in/amberbodnar/)
+* [GitHub](https://github.com/abodnar1)
