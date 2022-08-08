@@ -53,6 +53,7 @@ You can access this project through the deployed page [here](https://wandering-b
 
 ## Project Reflections
 #### Wins
+* Self-teaching and implementing typechecking with PropTypes.
 * The API had many null data values and had properties that were not needed for the scope of the application. A cleaning function was used to grab only the data needed upon the GET network request.
 * The data was not equipped with images, so they were added within the cleaning function based on the type of brewery (ie. all microbreweries were assigned the same photos while all nanobreweries were assigned a different one and so on and so forth).
 * Achieving minimum viable product (MVP) within a short time frame of 6 days.
