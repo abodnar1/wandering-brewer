@@ -15,24 +15,20 @@ const App = () => {
   return (
     <div className="app">
       <Header setBreweries={setBreweries} />
-      
       <Switch>
         <Route exact path="/">
           <Form breweries={breweries} setBreweries={setBreweries} error={error} setError={setError} />
           <Breweries breweries={breweries} error={error} favorites={favorites} setFavorites={setFavorites} />
         </Route>
-
         <Route path="/favorites">
           <Favorites favorites={favorites} setFavorites={setFavorites} />
         </Route>
-        
         <Route path="/:id"
           render={({ match }) => {
             const breweryToView = breweries.find(brewery => brewery.id === match.params.id);
             return <BreweryDetails breweryToView={breweryToView}/>
           }}>
         </Route>
-        
       </Switch>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { fetchBreweriesByCity } from "../../apiCalls";
-import { getCleanData, getBreweryTypeImage } from "../../utilities"
+import { getCleanData, getBreweryTypeImage } from "../../utilities";
 import "./Form.css";
 
 const Form = ({ breweries, setBreweries, error, setError }) => {
@@ -17,11 +17,8 @@ const Form = ({ breweries, setBreweries, error, setError }) => {
           setError("Oops, check your spelling and try again!");
         } else {
           setError("");
-          // console.log("data", data)
           const cleanData = getCleanData(data);
-          // console.log("cleanData", cleanData)
           const cleanDataWithImages = getBreweryTypeImage(cleanData);
-          // console.log("withImage", cleanDataWithImages)
           setBreweries(cleanDataWithImages);
         }
       })
@@ -62,6 +59,8 @@ const Form = ({ breweries, setBreweries, error, setError }) => {
 export default Form;
 
 Form.propTypes = {
+  breweries: PropTypes.array.isRequired,
   setBreweries: PropTypes.func.isRequired,
+  error: PropTypes.string.isRequired,
   setError: PropTypes.func.isRequired
-}
+};

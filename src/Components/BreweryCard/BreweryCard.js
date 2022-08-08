@@ -14,6 +14,7 @@ const BreweryCard = ({ id, name, city, state, type, isFavorite, image, favorites
 
   const addFavorite = (e) => {
     e.preventDefault();
+
     const newFavorite = {
       id,
       name,
@@ -24,14 +25,15 @@ const BreweryCard = ({ id, name, city, state, type, isFavorite, image, favorites
       image,
       setFavorites
     };
-    setFavoriteIcon(true)
+
+    setFavoriteIcon(true);
     setFavorites([...favorites, newFavorite]);
   };
 
   const removeFavorite = (e, id) => {
     e.preventDefault();
     isFavorite = false;
-    setFavoriteIcon(false)
+    setFavoriteIcon(false);
     const updatedFavorites = favorites.filter(favorite => favorite.id !== id);
     setFavorites(updatedFavorites);
   };
@@ -41,7 +43,8 @@ const BreweryCard = ({ id, name, city, state, type, isFavorite, image, favorites
       <div className="favorite-icon-container">
         {favoriteIcon ? <span className="favorite-icon" onClick={(e) => removeFavorite(e, id)}><FaBeer className="full-beer-icon"/></span> 
         : 
-        <span className="favorite-icon" onClick={(e) => addFavorite(e)}><BiBeer className="empty-beer-icon"/></span>}
+        <span className="favorite-icon" onClick={(e) => addFavorite(e)}><BiBeer className="empty-beer-icon"/></span>
+        }
       </div>
       <h2 className="brewery-name">{name}</h2>
       <p className="brewery-location">{city}, {state}</p>
@@ -63,8 +66,18 @@ BreweryCard.propTypes = {
   city: PropTypes.string.isRequired,
   state: PropTypes.string.isRequired,
   type: PropTypes.string,
-  isFavorite: PropTypes.bool,
+  isFavorite: PropTypes.bool.isRequired,
   image: PropTypes.string,
-  favorites: PropTypes.array,
+  favorites: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      city: PropTypes.string.isRequired,
+      state: PropTypes.string.isRequired,
+      type: PropTypes.string,
+      isFavorite: PropTypes.bool.isRequired,
+      image: PropTypes.string
+    })
+  ),
   setFavorites: PropTypes.func.isRequired
 };
