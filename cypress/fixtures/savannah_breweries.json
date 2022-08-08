@@ -10,7 +10,8 @@
     "phone": "9124470943",
     "website_url": "http://www.moonriverbrewing.com",
     "updated_at": "2021-10-23T02:24:55.243Z",
-    "isFavorite": "false"
+    "isFavorite": "false",
+    "image": "brewpub"
   },
   {
     "id": "two-tides-brewing-company-savannah",
@@ -23,6 +24,7 @@
     "phone": "9126670706",
     "website_url": "http://www.twotidesbrewing.com",
     "updated_at": "2021-10-23T02:24:55.243Z",
-    "isFavorite": "false"
+    "isFavorite": "false",
+    "image": "micro"
   }
 ]
