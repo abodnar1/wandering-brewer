@@ -23,7 +23,7 @@ describe("Wandering Brewer - Favorites", () => {
   });
 
   it("should be able to navigate back to the search page", () => {
-    cy.get(".back-to-search-link").contains("span", "back to search").click()
+    cy.get(".back-to-search-link-favorites").contains("div", "back to search").click()
     .url().should("eq", "http://localhost:3000/")
   });
 });
