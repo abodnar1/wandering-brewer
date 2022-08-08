@@ -1,4 +1,4 @@
-# [Wandering Brewer]
+# Wandering Brewer
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -14,8 +14,7 @@
 ## Project Overview
 This application was built for a brewer on the go! The goal was to have the brewer be able to search whatever city they were visiting and see which breweries were nearby. On the detailed viewing page, the brewer can see the address, website, and phone number of the spot they want to visit. They can also favorite the brewery so that they remember to go to it the next time they're in town!
 
-[VISUALS GO HERE]
-![](name-of-giphy.gif)
+![wbfullscreen](https://user-images.githubusercontent.com/99693359/183324433-80739fe7-553c-4356-81e9-c0abaa0e680c.mp4)
 
 The [Turing School of Software and Design](https://turing.edu/) provided a project spec sheet for students to follow, which can be found [here](https://frontend.turing.edu/projects/module-3/showcase.html).
 
