@@ -37,6 +37,16 @@ FavoriteCard.propTypes = {
   type: PropTypes.string,
   isFavorite: PropTypes.bool,
   image: PropTypes.string,
-  favorites: PropTypes.array,
+  favorites: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      city: PropTypes.string.isRequired,
+      state: PropTypes.string.isRequired,
+      type: PropTypes.string,
+      isFavorite: PropTypes.bool.isRequired,
+      image: PropTypes.string
+    })
+  ),
   setFavorites: PropTypes.func.isRequired
 };

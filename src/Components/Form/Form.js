@@ -59,6 +59,8 @@ const Form = ({ breweries, setBreweries, error, setError }) => {
 export default Form;
 
 Form.propTypes = {
+  breweries: PropTypes.array.isRequired,
   setBreweries: PropTypes.func.isRequired,
+  error: PropTypes.string.isRequired,
   setError: PropTypes.func.isRequired
 };

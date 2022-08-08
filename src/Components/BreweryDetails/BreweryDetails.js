@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import "./BreweryDetails.css";
 
 const BreweryDetails = ({ breweryToView }) => {
@@ -58,4 +59,14 @@ const BreweryDetails = ({ breweryToView }) => {
 
 export default BreweryDetails;
 
-// add proptypes
+BreweryDetails.propTypes = {
+  breweryToView: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+    state: PropTypes.string.isRequired,
+    type: PropTypes.string,
+    isFavorite: PropTypes.bool.isRequired,
+    image: PropTypes.string
+  })
+};

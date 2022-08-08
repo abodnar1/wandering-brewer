@@ -14,6 +14,7 @@ const BreweryCard = ({ id, name, city, state, type, isFavorite, image, favorites
 
   const addFavorite = (e) => {
     e.preventDefault();
+
     const newFavorite = {
       id,
       name,
@@ -24,6 +25,7 @@ const BreweryCard = ({ id, name, city, state, type, isFavorite, image, favorites
       image,
       setFavorites
     };
+
     setFavoriteIcon(true);
     setFavorites([...favorites, newFavorite]);
   };
@@ -64,8 +66,18 @@ BreweryCard.propTypes = {
   city: PropTypes.string.isRequired,
   state: PropTypes.string.isRequired,
   type: PropTypes.string,
-  isFavorite: PropTypes.bool,
+  isFavorite: PropTypes.bool.isRequired,
   image: PropTypes.string,
-  favorites: PropTypes.array,
+  favorites: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      city: PropTypes.string.isRequired,
+      state: PropTypes.string.isRequired,
+      type: PropTypes.string,
+      isFavorite: PropTypes.bool.isRequired,
+      image: PropTypes.string
+    })
+  ),
   setFavorites: PropTypes.func.isRequired
 };
