@@ -12,7 +12,7 @@
 
 
 ## Project Overview
-This application was built for a brewer on the go! The goal was to have the brewer be able to search whatever city they were visiting and see which breweries were nearby. On the detailed viewing page, the brewer can see the address, website, and phone number of the spot they want to visit. They can also favorite the brewery so that they remember to go to it the next time they're in town!
+This application was built for a brewer on the go! The goal was to have the brewer be able to search whatever city they were visiting and see which breweries were nearby. On the detailed viewing page, the brewer can see the address, website, and phone number of the spot they want to visit. They can also favorite a brewery so they remember to go to it the next time they're in town!
 
 Desktop:<br />
 ![wbfull](https://media.giphy.com/media/OkVmC5fwNfE48sWvsl/giphy.gif)<br />
