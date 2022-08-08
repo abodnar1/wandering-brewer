@@ -27,7 +27,7 @@ describe("Wandering Brewer App - With Search Results", () => {
     .get(".brewery-type").contains("p", "brewpub")
     .get(".phone").contains("a", "Phone: 912-447-0943")
     .get(".website-link").contains("a", "Visit website")
-    .get(".back-to-search-link").contains("span", "back to search").click()
+    .get(".back-to-search-link").contains("div", "back to search").click()
     .url().should("eq", "http://localhost:3000/")    
   });
 
