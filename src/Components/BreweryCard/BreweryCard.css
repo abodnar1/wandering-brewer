@@ -1,9 +1,8 @@
 .brewery-card-wrapper {
-  height: 22em;
   width: 20em;
   margin: 0.5em;
   color: black;
-  opacity: 0.8;
+  opacity: 0.95;
   background-color: #FFFFFF;
   border-radius: 15px;
 }
@@ -28,10 +27,7 @@
 }
 
 .brewery-type-image {
-  width: auto;
-  max-width: 150px;
-  height: auto;
-  max-height: 100px;
+  width: inherit;
 }
 
 .full-beer-icon, 

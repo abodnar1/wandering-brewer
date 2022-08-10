@@ -1,4 +1,7 @@
 .app {
   text-align: center;
-  background-color: #CEE1CD;
+  background-image: url("../../assets/twotides2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
