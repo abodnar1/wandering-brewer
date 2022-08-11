@@ -28,9 +28,11 @@ const BreweryDetails = ({ breweryToView }) => {
 
   return (
     <div className="brewery-details-container">
-      <Link to="/">
-        <div className="back-to-search-link">back to search</div>
-      </Link>
+      <div className="back-to-search-link">
+        <Link to="/" style={{"textDecoration": "none"}}>
+           <span className="back-to-search">back to search</span>
+        </Link>
+      </div>
       <div className="brewery-details-wrapper">
         <div className="brewery-detail-header">
           <h2 className="brewery-details-name">{breweryToView.name}</h2>
