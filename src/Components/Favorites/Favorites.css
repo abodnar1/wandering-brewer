@@ -1,13 +1,27 @@
 .favorites-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
   justify-content: space-evenly;
   justify-items: center;
+  align-items: center;
   height: 100vh;
   overflow: scroll;
-  flex-wrap: wrap;
-  align-items: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .favorites-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .favorites-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .back-to-search-link-favorites{
-  margin-top: 10px;
+  background-color: #FFFFFF;
+  padding: 10px;
 }

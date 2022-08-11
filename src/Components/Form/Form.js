@@ -38,7 +38,7 @@ const Form = ({ breweries, setBreweries, error, setError }) => {
       <p className="site-info">
         This app was designed for the wandering brewer who is looking<br/>
         to keep tabs on their favorite breweries while traveling.<br/>
-        Start by typing in a city to see what's around!
+       Type in a city to see what's around!
       </p>
       <form>
         <input className="city-search" 
@@ -51,7 +51,7 @@ const Form = ({ breweries, setBreweries, error, setError }) => {
         <button className="search-button" disabled={!city} onClick={(e) => handleClick(e)}>Search</button>
       </form>
       {error && <p className="error-message">{error}</p>}
-      {!error && breweries.length === 0 && <h3 className="no-search-results-message">Start looking for breweries in your area!</h3>}
+      {/* {!error && breweries.length === 0 && <h3 className="no-search-results-message">Start looking for breweries in your area!</h3>} */}
     </div>
   );
 };

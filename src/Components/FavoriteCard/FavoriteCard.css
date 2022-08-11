@@ -1,37 +1,27 @@
 .favorite-card-wrapper {
-  height: 22em;
   width: 20em;
+  height: 24em;
   margin: 0.5em;
   color: black;
-  opacity: 0.8;
+  opacity: 1.2;
   background-color: #FFFFFF;
   border-radius: 15px;
+  box-shadow: 3px 3px 3px grey;
 }
 
 .favorite-name {
-  height: 10%;
-  overflow-wrap: break-word;
+  font-size: 21px;
 }
 
-.favorite-location {
-  height: 12%
-}
-
+.favorite-image-container,
 .favorite-type-image {
-  width: auto;
-  max-width: 150px;
-  height: auto;
-  max-height: 100px;
-  margin-bottom: 2em;
+  width: inherit;
+  margin-bottom: 10px;
 }
 
 .remove-favorite-button {
-  font-size: 2em;
+  font-size: 24px;
   cursor: pointer;
-}
-
-.remove-favorite-button:hover {
-  transform: scale(1.1);
 }
 
 .view-details-link {
