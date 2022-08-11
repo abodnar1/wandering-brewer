@@ -1,38 +1,32 @@
 .brewery-card-wrapper {
   width: 20em;
+  height: 24em;
   margin: 0.5em;
   color: black;
   opacity: 1.2;
   background-color: #FFFFFF;
   border-radius: 15px;
+  box-shadow: 3px 3px 3px grey;
 }
 
 .favorite-icon-container {
   display: flex;
   justify-content: flex-end;
-  margin: 4px 4px 0px 0px;
+  margin: 5px 6px 0px 0px;
 }
 
 .brewery-name {
-  height: 10%;
-  overflow-wrap: break-word;
+  font-size: 21px;
 }
 
-.brewery-location {
-  height: 12%
-}
-
-.brewery-image-container {
-  width: inherit;
-}
-
+.brewery-image-container,
 .brewery-type-image {
   width: inherit;
 }
 
 .full-beer-icon, 
 .empty-beer-icon {
-  font-size: 3em;
+  font-size: 2em;
   cursor: pointer;
 }
 
@@ -42,10 +36,10 @@
 }
 
 .view-details-link {
-  margin: 1em 0em 0em 0em;
   color: black;
 }
 
 .view-details-link:hover {
 	text-decoration: underline;
+  font-weight: bold;
 }

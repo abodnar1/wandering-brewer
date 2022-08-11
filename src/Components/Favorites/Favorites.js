@@ -24,13 +24,14 @@ const Favorites = ({ favorites, setFavorites }) => {
 
   return (
     <>
-      <div className="back-to-search-link-favorites">
-        <Link to="/">
-           <span>back to search</span>
+      <div className="back-to-search-link">
+        <Link to="/" style={{"textDecoration": "none"}}>
+           <span className="back-to-search">back to search</span>
         </Link>
       </div>
+        {!favorites.length && <p className="no-favorites-message">You haven't added any favorites yet!</p>}
       <div className="favorites-container">
-        {favorites.length ? favoriteBreweries : <h3 className="no-favorites-message">You haven't added any favorites yet!</h3>}
+        {favoriteBreweries}
       </div>
     </>
   );
