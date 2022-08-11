@@ -1,7 +1,3 @@
-.back-to-search-link {
-  margin: 1em 0em 1em 0em;
-}
-
 .brewery-details-container {
   display: flex;
   flex-direction: column;
@@ -10,16 +6,15 @@
 }
 
 .brewery-details-wrapper {
-  height: 80vh;
+  /* height: 80vh; */
   width: 30vw;
   color: black;
-  opacity: 0.95;
   background-color: #FFFFFF;
   border-radius: 15px;
 }
 
 .brewery-details-image-container {
-  width: 30vw;
+  width: inherit;
   display: flex;
   justify-content: center;
 }
