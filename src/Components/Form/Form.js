@@ -51,7 +51,6 @@ const Form = ({ breweries, setBreweries, error, setError }) => {
         <button className="search-button" disabled={!city} onClick={(e) => handleClick(e)}>Search</button>
       </form>
       {error && <p className="error-message">{error}</p>}
-      {/* {!error && breweries.length === 0 && <h3 className="no-search-results-message">Start looking for breweries in your area!</h3>} */}
     </div>
   );
 };

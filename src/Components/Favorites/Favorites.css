@@ -4,12 +4,13 @@
   grid-gap: 1em;
   justify-content: space-evenly;
   justify-items: center;
-  margin-top: 2em;
+  margin-top: em;
   height: 100vh;
   overflow: scroll;
 }
 
-.no-favorites-message {
+.no-favorites-message,
+.back-to-search-link-favorites {
   color: black;
   opacity: 0.9;
   background-color: #FFFFFF;
@@ -17,6 +18,21 @@
   padding: 1em;
   margin: 1em;
   border-radius: 54px;
+}
+
+.back-to-search-link-favorites {
+  margin: 30px 100px 30px 100px;
+}
+
+.back-to-search {
+  text-decoration: none;
+  color: black;
+  background-color: #FFFFFF;
+}
+
+.back-to-search-link-favorites:hover {
+	text-decoration: underline;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 900px) {
@@ -29,9 +45,4 @@
   .favorites-container {
     grid-template-columns: repeat(1, 1fr);
   }
-}
-
-.back-to-search-link-favorites{
-  background-color: #FFFFFF;
-  padding: 10px;
 }
