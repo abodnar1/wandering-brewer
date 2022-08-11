@@ -14,11 +14,7 @@
 ## Project Overview
 This application was built for a brewer on the go! The goal was to have the brewer be able to search whatever city they were visiting and see which breweries were nearby. On the detailed viewing page, the brewer can see the address, website, and phone number of the spot they want to visit. They can also favorite a brewery so they remember to go to it the next time they're in town!
 
-Desktop:<br />
-![wbfull](https://media.giphy.com/media/OkVmC5fwNfE48sWvsl/giphy.gif)<br />
 
-Mobile:<br />
-![wbmobile](https://media.giphy.com/media/rmLBnhEcRvDbcr3GJZ/giphy.gif)
 
 The [Turing School of Software and Design](https://turing.edu/) provided a project spec sheet for students to follow, which can be found [here](https://frontend.turing.edu/projects/module-3/showcase.html).
 
