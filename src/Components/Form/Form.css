@@ -3,38 +3,18 @@
 }
 
 .no-search-results-message,
-.error-message {
+.error-message.error-message,
+.site-info {
   color: black;
   opacity: 0.9;
   background-color: #FFFFFF;
-  font-style: italic;
-  font-size: 24px;
+  font-size: 20px;
   padding: 1em;
-  margin: 0em 5em 0em 5em;
-  border-radius: 22px;
+  margin: 2em;
+  border-radius: 54px;
 }
 
 .error-message {
   color: red;
-}
-
-.site-info {
-  padding-top: 1em;
-}
-
-.city-search {
-  width: 20em;
-  height: 1.5em;
-  margin: 1em 0em 2em 0em;
-}
-
-button:disabled {
-  cursor: not-allowed;
-}
-
-.search-button {
-  width: 8em;
-  height: 2em;
-  margin: 1em;
-  cursor: pointer;
+  font-style: italic;
 }
