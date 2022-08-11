@@ -23,12 +23,3 @@
   font-size: 24px;
   cursor: pointer;
 }
-
-.view-details-link {
-  margin: 0em 0em 1em 0em;
-  color: black;
-}
-
-.view-details-link:hover {
-	text-decoration: underline;
-}
