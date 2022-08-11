@@ -4,9 +4,19 @@
   grid-gap: 1em;
   justify-content: space-evenly;
   justify-items: center;
-  align-items: center;
+  margin-top: 2em;
   height: 100vh;
   overflow: scroll;
+}
+
+.no-favorites-message {
+  color: black;
+  opacity: 0.9;
+  background-color: #FFFFFF;
+  font-size: 20px;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 54px;
 }
 
 @media only screen and (max-width: 900px) {
