@@ -19,11 +19,11 @@ describe("Wandering Brewer - Favorites", () => {
   it("should be able to remove a brewery from favorites by clicking the trashcan", () => {
     cy.get(".remove-favorite-button").click()
     .get(".favorites-container").find(".favorite-card-wrapper").should("have.length", 0)
-    .get(".no-favorites-message").contains("h3", "You haven't added any favorites yet!")
+    .get(".no-favorites-message").contains("p", "You haven't added any favorites yet!")
   });
 
   it("should be able to navigate back to the search page", () => {
-    cy.get(".back-to-search-link-favorites").contains("div", "back to search").click()
+    cy.get(".back-to-search-link").contains("div", "back to search").click()
     .url().should("eq", "http://localhost:3000/")
   });
 });

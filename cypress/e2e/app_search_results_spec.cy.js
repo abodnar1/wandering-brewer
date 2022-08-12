@@ -23,7 +23,7 @@ describe("Wandering Brewer App - With Search Results", () => {
     
     .get(".view-details-link").first().click()
     .url().should("eq","http://localhost:3000/moon-river-brewing-co-savannah")
-    .get(".brewery-details-name").contains("h2", "Moon River Brewing Co")
+    .get(".brewery-name").contains("h2", "Moon River Brewing Co")
     .get(".brewery-type").contains("p", "brewpub")
     .get(".phone").contains("a", "Phone: 912-447-0943")
     .get(".website-link").contains("a", "Visit website")
