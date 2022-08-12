@@ -38,7 +38,7 @@ const Form = ({ breweries, setBreweries, error, setError }) => {
       <p className="site-info">
         This app was designed for the wandering brewer who is looking<br/>
         to keep tabs on their favorite breweries while traveling.<br/>
-       Type in a city to see what's around!
+        Type in a city to see what's around!
       </p>
       <form>
         <input className="city-search" 
