@@ -1,4 +1,5 @@
 # Wandering Brewer
+*A [Turing School of Software and Design](https://turing.edu/) Module 3 Final Solo Project*
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -12,7 +13,7 @@
 
 
 ## Project Overview
-This application was built for a brewer on the go! The goal was to have the brewer be able to search whatever city they were visiting and see which breweries were nearby. On the detailed viewing page, the brewer can see the address, website, and phone number of the spot they want to visit. They can also favorite a brewery so they remember to go to it the next time they're in town!
+This application was built for the brewer who is looking to keep tabs on their favorite breweries while traveling. The brewer can search any U.S. city and see which breweries are nearby. On the detailed viewing page, the brewer can see the address, website, and phone number of the spot they want to visit. They can also favorite a brewery so they remember to go to it the next time they're in town.
 
 
 
@@ -20,10 +21,10 @@ The [Turing School of Software and Design](https://turing.edu/) provided a proje
 
 
 ## Learning Goals
-To demonstrate our learning on topics that include React, React Router, Asynchronous JavaScript, and end-to-end testing with Cypress. User personas and user stories were to be utilized to target a niche audience.
+To demonstrate learning on topics that include React, React Router, Asynchronous JavaScript, and end-to-end testing with Cypress. User personas and user stories were to be utilized to target a niche audience.
 Core functionality needed to include:
 * Displaying data from an API in such a way that applies directly to the target audience
-* Ability for users to store/manipulate the displayed data (ie. favoriting)
+* Ability for a single user to store/manipulate the displayed data (ie. favoriting)
 * Multiple views handled by Router
 
 
@@ -62,9 +63,9 @@ You can access this project through the deployed page [here](https://wandering-b
 
 ## Roadmap
 Future features could include:
-* Update styling and improve contact info on the details page (ie. Instagram, Twitter, Facebook)
+* Improve contact info on the details page (ie. Instagram, Twitter, Facebook)
 * Add local storage so that a user can see their favorites each time they visit the site.
-* Add a section that allows the user to make notes about their visit or rate the brewery.
+* Add a section that allows the user to make notes about their experience or rate the beer.
 
 
 ## Setup
