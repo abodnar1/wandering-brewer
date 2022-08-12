@@ -4,7 +4,7 @@
 }
 
 .no-search-results-message,
-.error-message.error-message,
+.error-message,
 .site-info {
   color: black;
   opacity: 0.9;
@@ -12,10 +12,11 @@
   font-size: 20px;
   padding: 1em;
   margin: 2em;
-  border-radius: 54px;
+  border-radius: 30px;
 }
 
 .error-message {
   color: red;
+  font-weight: bold;
   font-style: italic;
 }
