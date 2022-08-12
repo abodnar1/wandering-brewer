@@ -33,25 +33,28 @@ const BreweryDetails = ({ breweryToView }) => {
            <span className="back-to-search">back to search</span>
         </Link>
       </div>
-      <div className="brewery-details-wrapper">
-        <div className="brewery-detail-header">
-          <h2 className="brewery-details-name">{breweryToView.name}</h2>
+      <div className="details-wrapper">
+        <div className="details-header">
+          <h2 className="brewery-name">{breweryToView.name}</h2>
         </div>
-        <div className="brewery-details-image-container">
-         <img className="brewery-details-image" src={breweryToView.image} alt={breweryToView.type}></img>
+        <div className="details-image-container">
+         <img className="details-image" src={breweryToView.image} alt={breweryToView.type}></img>
         </div>
-        <div className="brewery-type-and-contact-wrapper">
-          <div className="brewery-type-updated-wrapper">
-            <p className="brewery-type">Brewery Type: {breweryToView.brewery_type}</p>
-            <p className="last-updated">Updated: {formatLastUpdated(breweryToView.updated_at)}</p>
+        <div className="details-type-contact-container">
+          <div className="type-updated-wrapper">
+            <p className="brewery-type">{breweryToView.brewery_type}</p>
+            <p className="last-updated">{formatLastUpdated(breweryToView.updated_at)}</p>
           </div>
           <div className="contact-info-wrapper">
-            {breweryToView.street && <p className="street">Address: <br/> {breweryToView.street}</p>}
-            <p className="brewery-location">City, State: <br/> {formatLocation(breweryToView.city, breweryToView.state, breweryToView.zip)}</p>
-            <br/>
-            {breweryToView.phone && <a className="phone" href={"tel:" + breweryToView.phone}>Phone: {formatPhone(breweryToView.phone)}</a>}
-            <br/>
-            {breweryToView.website_url && <a className="website-link" href={breweryToView.website_url}>Visit website</a>}
+            <div className="address">
+              {breweryToView.street && <p className="street">{breweryToView.street}</p>}
+              <p className="city-state">{formatLocation(breweryToView.city, breweryToView.state, breweryToView.zip)}</p>
+            </div>
+            <div className="phone-website">
+              {breweryToView.phone && <a className="phone" href={"tel:" + breweryToView.phone}>Phone: {formatPhone(breweryToView.phone)}</a>}
+              <br/>
+              {breweryToView.website_url && <a className="website-link" href={breweryToView.website_url}>Visit website</a>}
+            </div>
           </div>
         </div>
       </div>
