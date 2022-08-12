@@ -15,10 +15,10 @@
 ## Project Overview
 This application was built for the brewer who is looking to keep tabs on their favorite breweries while traveling. The brewer can search any U.S. city and see which breweries are nearby. On the detailed viewing page, the brewer can see the address, website, and phone number of the spot they want to visit. They can also favorite a brewery so they remember to go to it the next time they're in town.
 
-[wandering brewer mp4 desktop view](https://user-images.githubusercontent.com/99693359/184418856-aece88b3-a788-4a15-b708-78bc2ea83ede.mp4)
 
-[wandering brewer mp4 mobile view](https://user-images.githubusercontent.com/99693359/184421045-41391687-7da8-48bf-80c9-e6f93b6b766d.mp4)
+![wb-desktop-gif](https://media.giphy.com/media/yn2yZz3p3XRjoP9GFP/giphy.gif)
 
+![wb-mobile-gif](https://media.giphy.com/media/JG42emfw2cRv0mkD67/giphy.gif)
 
 The [Turing School of Software and Design](https://turing.edu/) provided a project spec sheet for students to follow, which can be found [here](https://frontend.turing.edu/projects/module-3/showcase.html).
 
