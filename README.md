@@ -5,8 +5,8 @@ Visit the deployed site [here](https://wandering-brewer.herokuapp.com/).
 ## Table of Contents
 - [Summary](#summary)
 - [Setup](#setup)
-- [Learning Goals](#learning-goals)
 - [Technologies and Tools](#technologies-and-tools)
+- [Learning Goals](#learning-goals)
 - [Project Reflections](#project-reflections)
 - [Roadmap](#roadmap)
 - [Contributors](#contributors)
@@ -32,14 +32,6 @@ For Cypress Testing:
 2. Follow the prompts in the browser and select the spec file you want to run
 
 
-## Learning Goals
-To demonstrate learning on topics that include React, React Router, Asynchronous JavaScript, and end-to-end testing with Cypress. User personas and user stories were to be utilized to target a niche audience.
-Core functionality needed to include:
-* Displaying data from an API in such a way that applies directly to the target audience
-* Ability for a single user to store/manipulate the displayed data (ie. favoriting)
-* Multiple views handled by Router
-
-
 ## Technologies and Tools
 * React
 * React Router
@@ -48,12 +40,20 @@ Core functionality needed to include:
 * Postman
 * HTML
 * CSS
-* Cypress
+* Cypress Testing
 * npm
 * Webpack
 * GitHub Issues
 * GitHub Projects
 * Excalidraw (wireframes)
+
+
+## Learning Goals
+To demonstrate learning on topics that include React, React Router, Asynchronous JavaScript, and end-to-end testing with Cypress. User personas and user stories were to be utilized to target a niche audience.
+Core functionality needed to include:
+* Displaying data from an API in such a way that applies directly to the target audience
+* Ability for a single user to store/manipulate the displayed data (ie. favoriting)
+* Multiple views handled by Router
 
 
 ## Project Reflections
