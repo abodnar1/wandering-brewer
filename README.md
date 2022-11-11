@@ -1,11 +1,10 @@
 # Wandering Brewer
-*A [Turing School of Software and Design](https://turing.edu/) Module 3 Final Solo Project*
+Visit the deployed site [here](https://wandering-brewer.herokuapp.com/).
 
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Learning Goals](#learning-goals)
 - [Technologies and Tools](#technologies-and-tools)
-- [Deployed Page](#deployed-page)
 - [Project Reflections](#project-reflections)
 - [Roadmap](#roadmap)
 - [Setup](#setup)
@@ -47,10 +46,6 @@ Core functionality needed to include:
 * Excalidraw (wireframes)
 
 
-## Deployed Page
-You can access this project through the deployed page [here](https://wandering-brewer.herokuapp.com/).
-
-
 ## Project Reflections
 #### Wins
 * Self-teaching and implementing typechecking with PropTypes.
@@ -87,3 +82,5 @@ For Cypress Testing:
 Amber Bodnar
 * [LinkedIn](https://www.linkedin.com/in/amberbodnar/)
 * [GitHub](https://github.com/abodnar1)
+
+*A [Turing School of Software and Design](https://turing.edu/) Module 3 Final Solo Project*
