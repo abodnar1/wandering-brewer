@@ -1,5 +1,5 @@
 # Wandering Brewer
-Visit the deployed site [here](https://wandering-brewer.herokuapp.com/).
+Visit the deployed site [here](https://wandering-brewer.vercel.app/).
 
 
 ## Table of Contents
